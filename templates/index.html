@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Otomatik Web Sitesi Oluşturucu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Otomatik Web Sitesi Oluşturucu</h1>
+        <p>Konu girin, yapay zekâ sizin için web sitesi alternatifleri oluştursun.</p>
+
+        <input type="text" id="topic" placeholder="Örn: Yapay zekâ üzerine teknoloji sitesi">
+        <button id="generateBtn">Oluştur</button>
+
+        <div id="results"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
