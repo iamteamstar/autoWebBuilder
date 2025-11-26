@@ -73,16 +73,30 @@ Flask Backend
 
 ##  Kullanıcı Akışı
 [1] Kayıt / Giriş
+<img width="493" height="412" alt="image" src="https://github.com/user-attachments/assets/7aa13281-5684-42ba-8d60-a8e0ef205839" /> <img width="484" height="402" alt="image" src="https://github.com/user-attachments/assets/b45a5f4f-0fc4-46c5-89af-6c55649b3ee6" />
+
+
 ↓
 [2] Ana Sayfa → Konu Girilir
+<img width="1214" height="316" alt="image" src="https://github.com/user-attachments/assets/95fbf76a-0ad9-40c6-a870-4235e314a1c1" />
+
 ↓
 [3] Gemini API → 3 Site Üretilir
+<img width="1121" height="892" alt="image" src="https://github.com/user-attachments/assets/be789332-da83-4805-8601-17d3927ccc56" />
+
 ↓
 [4] Kullanıcı Önizleme / Düzenleme / İndirme
+<img width="1862" height="881" alt="image" src="https://github.com/user-attachments/assets/98585eba-f437-423b-901f-9e5da96726f3" />
+
 ↓
 [5] Değişiklikler edited klasörüne kaydedilir
+
+<img width="1038" height="415" alt="image" src="https://github.com/user-attachments/assets/074b7cfb-7ee8-408f-8c46-6bcdb555c572" />
+
 ↓
 [6] Profil & Kaydedilen Sitelerden yönetim yapılır
+
+<img width="827" height="868" alt="image" src="https://github.com/user-attachments/assets/496168a5-abc3-4e88-be30-cb8699f173e5" />
 
 
 ---
