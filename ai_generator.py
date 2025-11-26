@@ -7,9 +7,9 @@ import google.generativeai as genai
 load_dotenv()
 
 # ✔️ ENV değişkenini doğru oku
-API_KEY = os.getenv("AIzaSyD5l9vOHprZnXjZSM7YOp7daYyAGwJX22w")
+API_KEY = os.getenv("GEMINI_API_KEY")
 if not API_KEY:
-    raise Exception("❌ GEMINI_API_KEY .env dosyasında bulunamadı!")
+    raise Exception(" GEMINI_API_KEY .env dosyasında bulunamadı!")
 
 # ✔️ Gemini API yapılandırması
 genai.configure(api_key=API_KEY)
