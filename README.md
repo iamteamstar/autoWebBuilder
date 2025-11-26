@@ -33,13 +33,13 @@ Hiçbir kod bilgisine gerek olmadan profesyonel web sitesi üretmeyi sağlar.
 
 ---
 
-## 🚀 Temel Özellikler
+##  Temel Özellikler
 
-### **✨ Yapay Zekâ ile 3 Farklı Tema Üretimi**
+### ** Yapay Zekâ ile 3 Farklı Tema Üretimi**
 - Her tema tamamen farklı HTML + CSS yapısına sahiptir.
 - Navbar, Hero Section, Content Sections, Footer içerir.
 
-### **🎨 Gelişmiş Site Düzenleme Paneli**
+### ** Gelişmiş Site Düzenleme Paneli**
 Kullanıcı siteyi şu açılardan düzenleyebilir:
 - Logo değiştirme  
 - Tema renkleri  
@@ -49,14 +49,14 @@ Kullanıcı siteyi şu açılardan düzenleyebilir:
 - Yeni bölüm / section ekleme  
 - Doğrudan HTML kodu üzerinde düzenleme  
 
-### **📁 Kullanıcıya Özel Dosya Yönetimi**
+### ** Kullanıcıya Özel Dosya Yönetimi**
 - Her kullanıcı kendi UID klasörüne sahiptir.
 - Orijinal ve edited siteler ayrı saklanır.
 
-### **📥 Zip Olarak İndirme**
+### ** Zip Olarak İndirme**
 - Kullanıcı düzenlediği veya orijinal siteyi .zip olarak indirebilir.
 
-### **👤 Profil & Kaydedilen Siteler**
+### ** Profil & Kaydedilen Siteler**
 - Kullanıcıya ait tüm siteler listelenir.
 - Düzenlenmiş sürümler ayrı olarak gösterilir.
 
@@ -71,7 +71,7 @@ Flask Backend
 ├── Metadata Sistemi
 └── Zip Exporter
 
-## 🔑 Kullanıcı Akışı
+##  Kullanıcı Akışı
 [1] Kayıt / Giriş
 ↓
 [2] Ana Sayfa → Konu Girilir
@@ -87,7 +87,7 @@ Flask Backend
 
 ---
 
-## 🧠 Yapay Zekâ ile Şablon Üretimi
+##  Yapay Zekâ ile Şablon Üretimi
 
 Yapay zekâdan istenen çıktı:
 
@@ -102,7 +102,7 @@ Yapay zekâdan istenen çıktı:
   ...
 ]
 
-## 🏗 Sistem Mimarisi
+##  Sistem Mimarisi
 
 Sistem:
 
@@ -141,10 +141,10 @@ Logo Yükleme
 
 Herhangi bir PNG/JPG yüklenip sayfaya uygulanabilir.
 
-##Kaydetme Süreci
+## Kaydetme Süreci
 original site  →  edited copy oluşturulur
                   generated_sites/<user>/edited/<site>_edited
-##Klasör Yapısı
+## Klasör Yapısı
 generated_sites/
    └── <user_id>/
         ├── <site_id>/
@@ -160,7 +160,7 @@ generated_sites/
                      ├── images/
                      └── metadata.json
                      
-##Teknik Bileşenler
+## Teknik Bileşenler
 
 | Bileşen        | Teknoloji                          |
 | -------------- | ---------------------------------- |
@@ -173,7 +173,7 @@ generated_sites/
 | Güvenlik       | .env + gitignore secret management |
 | Oturum         | Flask Session                      |
 
-##Genel Sistem Diyagramı
+## Genel Sistem Diyagramı
 
 Kullanıcı
    ↓
@@ -206,7 +206,7 @@ Zip arşivi oluşturulur
       ↓
 Kullanıcıya response olarak gönderilir
 
-##Kurulum ve Çalıştırma
+## Kurulum ve Çalıştırma
 1.Depoyu Klonla
 git clone https://github.com/kullanici/autoWebBuilder.git
 cd autoWebBuilder
