@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyaz Eşyalar - Modern Minimalist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .navbar .nav-links a {
+            color: #555;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #007BFF;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://via.placeholder.com/1500x600/F0F0F0/333333?text=Modern+Mutfak+Çözümleri') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 500px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+            z-index: 1;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 14px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Content Area */
+        .content-area {
+            padding: 60px 0;
+        }
+
+        .content-area h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333;
+            position: relative;
+        }
+
+        .content-area h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #007BFF;
+            border-radius: 2px;
+        }
+
+        .featured-products {
+            margin-bottom: 80px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .product-card {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-card p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .btn-small {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-small:hover {
+            background-color: #0056b3;
+        }
+
+        .about-us {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+        }
+
+        .about-us p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer p {
+            margin: 0 0 15px 0;
+        }
+
+        .footer .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-links a:hover {
+            color: #007BFF;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+            }
+            .navbar .nav-links {
+                margin-top: 15px;
+            }
+            .navbar .nav-links a {
+                margin: 0 10px;
+            }
+
+            .hero {
+                padding: 80px 20px;
+                min-height: 400px;
+            }
+            .hero h1 {
+                font-size: 38px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+
+            .content-area h2 {
+                font-size: 30px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-card {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar .logo {
+                font-size: 24px;
+            }
+            .navbar .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .navbar .nav-links a {
+                margin: 5px 8px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 15px;
+            }
+
+            .content-area h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Beyaz Evim</a>
+            <nav class="nav-links">
+                <a href="#">Anasayfa</a>
+                <a href="#">Ürünler</a>
+                <a href="#">Kampanyalar</a>
+                <a href="#">İletişim</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Evinize Modern Dokunuşlar Katın</h1>
+            <p>En yeni teknolojiye sahip beyaz eşyalarla hayatınızı kolaylaştırın.</p>
+            <a href="#" class="btn">Ürünleri Keşfet</a>
+        </div>
+    </section>
+
+    <main class="content-area">
+        <div class="container">
+            <section class="featured-products">
+                <h2>Öne Çıkan Ürünler</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200/F0F0F0/333333?text=Buzdolabı" alt="Buzdolabı">
+                        <h3>Akıllı Buzdolabı</h3>
+                        <p>Enerji verimli, geniş iç hacimli ve akıllı özellikler.</p>
+                        <a href="#" class="btn-small">Detaylar</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200/F0F0F0/333333?text=Çamaşır+Makinesi" alt="Çamaşır Makinesi">
+                        <h3>Sessiz Çamaşır Makinesi</h3>
+                        <p>Yüksek performans ve ultra sessiz yıkama deneyimi.</p>
+                        <a href="#" class="btn-small">Detaylar</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200/F0F0F0/333333?text=Bulaşık+Makinesi" alt="Bulaşık Makinesi">
+                        <h3>Turbo Bulaşık Makinesi</h3>
+                        <p>Hızlı ve hijyenik yıkama programları.</p>
+                        <a href="#" class="btn-small">Detaylar</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-us">
+                <h2>Hakkımızda</h2>
+                <p>Beyaz Evim olarak, evlerinizi modern teknoloji ve şık tasarımlarla buluşturmayı hedefliyoruz. Müşteri memnuniyetini ön planda tutarak, en kaliteli ve dayanıklı beyaz eşyaları sizlere sunuyoruz.</p>
+                <p>Geniş ürün yelpazemiz ve uygun fiyatlarımızla hayalinizdeki evi kurmanıza yardımcı olmaktan gurur duyarız.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Beyaz Evim. Tüm Hakları Saklıdır.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

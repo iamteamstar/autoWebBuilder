@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akıllı Telefonlar - Tech Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Smart<span class="logo-highlight">Tech</span></a>
+            <ul class="nav-links">
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#features">Özellikler</a></li>
+                <li><a href="#reviews">İncelemeler</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+            <div class="burger-menu">&#9776;</div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Geleceğin Teknolojisi Avucunuzda</h1>
+                <p>En yeni akıllı telefon modelleriyle tanışın, inovasyonu keşfedin.</p>
+                <a href="#features" class="btn-primary">Modelleri Keşfet</a>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="https://via.placeholder.com/400x600/3498db/ffffff?text=Ak%C4%B1ll%C4%B1+Telefon" alt="Akıllı Telefon" class="hero-phone-image">
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="features" class="section features-section">
+            <div class="container">
+                <h2>Öne Çıkan Özellikler</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="icon fas fa-camera"></i>
+                        <h3>Yüksek Çözünürlüklü Kameralar</h3>
+                        <p>Her anınızı mükemmel kalitede yakalayın.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="icon fas fa-microchip"></i>
+                        <h3>Yeni Nesil İşlemciler</h3>
+                        <p>Maksimum performans ve akıcı bir deneyim.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="icon fas fa-battery-full"></i>
+                        <h3>Uzun Ömürlü Batarya</h3>
+                        <p>Gününüzü kesintisiz yaşayın.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="icon fas fa-mobile-alt"></i>
+                        <h3>Çarpıcı Ekranlar</h3>
+                        <p>Renklerin canlılığına hayran kalın.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="section reviews-section">
+            <div class="container">
+                <h2>Kullanıcı Yorumları</h2>
+                <div class="review-carousel">
+                    <div class="review-card">
+                        <p>"Bu telefon beklentilerimin ötesinde. Kamera kalitesi inanılmaz!"</p>
+                        <span>- Ayşe Yılmaz</span>
+                    </div>
+                    <div class="review-card">
+                        <p>"Performansı ve batarya ömrü harika. Şiddetle tavsiye ederim."</p>
+                        <span>- Mehmet Demir</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h3>SmartTech</h3>
+                    <p>Akıllı telefon dünyasındaki rehberiniz.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Hızlı Linkler</h3>
+                    <ul>
+                        <li><a href="#">Gizlilik Politikası</a></li>
+                        <li><a href="#">Kullanım Koşulları</a></li>
+                        <li><a href="#">Sıkça Sorulan Sorular</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Bizi Takip Edin</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SmartTech. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        document.querySelector('.burger-menu').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,532 @@
+/* Basic Reset & Body - Vibrant Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f2f5; /* Light gray background */
+}
+
+.container-vibrant {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Navbar Vibrant */
+.navbar-vibrant {
+    background-color: #fff;
+    padding: 18px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-vibrant .container-vibrant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-vibrant .logo-vibrant {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 2.2rem;
+    color: #FF5722; /* Vibrant Orange */
+    letter-spacing: -1px;
+}
+
+.nav-links-vibrant {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links-vibrant li {
+    margin-left: 35px;
+}
+
+.nav-links-vibrant a {
+    color: #555;
+    font-weight: 500;
+    font-size: 1.05rem;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links-vibrant a:hover {
+    color: #FF5722;
+}
+
+.nav-links-vibrant a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: #FF5722;
+    transition: width 0.3s ease-out;
+}
+
+.nav-links-vibrant a:hover::after {
+    width: 100%;
+}
+
+.nav-links-vibrant .cart-icon-vibrant {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.nav-links-vibrant .cart-icon-vibrant svg {
+    color: #333;
+    transition: color 0.3s ease;
+}
+.nav-links-vibrant .cart-icon-vibrant svg:hover {
+    color: #FF5722;
+}
+
+.menu-toggle-vibrant {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle-vibrant span {
+    height: 3px;
+    width: 28px;
+    background-color: #333;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hero Section Vibrant */
+.hero-section-vibrant {
+    background: linear-gradient(135deg, rgba(255,87,34,0.8), rgba(255,160,0,0.8)), url('https://via.placeholder.com/1600x700/FFAB00/FFFFFF?text=Enerji+Veren+Atistirmaliklar') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 140px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 650px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section-vibrant::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255,255,255,0.1);
+    transform: rotate(45deg);
+    border-radius: 20px;
+}
+.hero-section-vibrant::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255,255,255,0.15);
+    transform: rotate(-30deg);
+    border-radius: 50%;
+}
+
+
+.hero-content-vibrant {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content-vibrant h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.5rem;
+    margin-bottom: 25px;
+    font-weight: 900;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+}
+
+.hero-content-vibrant p {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+}
+
+.hero-buttons-vibrant {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.btn-vibrant {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.primary-btn-vibrant {
+    background-color: #FF5722; /* Vibrant Orange */
+    color: #fff;
+    border: 2px solid #FF5722;
+}
+
+.primary-btn-vibrant:hover {
+    background-color: #e64a19;
+    border-color: #e64a19;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.secondary-btn-vibrant {
+    background-color: #fff;
+    color: #FF5722;
+    border: 2px solid #fff;
+}
+
+.secondary-btn-vibrant:hover {
+    background-color: rgba(255,255,255,0.9);
+    color: #e64a19;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Content Area Vibrant */
+.content-area-vibrant {
+    padding: 80px 0;
+}
+
+.content-area-vibrant h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 3.2rem;
+    margin-bottom: 60px;
+    color: #333;
+    font-weight: 700;
+}
+
+/* Collections */
+.collection-grid-vibrant {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.collection-card-vibrant {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.collection-card-vibrant:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.collection-card-vibrant img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.collection-card-vibrant h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #FF5722;
+    font-weight: 700;
+}
+
+.collection-card-vibrant p {
+    font-size: 1.05rem;
+    color: #666;
+    margin-bottom: 25px;
+    padding: 0 25px;
+}
+
+.collection-link-vibrant {
+    color: #2196F3; /* Electric Blue accent */
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.collection-link-vibrant:hover {
+    color: #1976D2;
+}
+
+/* Promo Section */
+.promo-section-vibrant {
+    background: linear-gradient(45deg, #4CAF50, #8BC34A); /* Green gradient */
+    color: #fff;
+    padding: 70px 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 80px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.promo-section-vibrant h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 3rem;
+}
+
+.promo-section-vibrant p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-weight: 300;
+}
+
+.promo-section-vibrant .primary-btn-vibrant {
+    background-color: #fff;
+    color: #4CAF50;
+    border-color: #fff;
+}
+
+.promo-section-vibrant .primary-btn-vibrant:hover {
+    background-color: rgba(255,255,255,0.9);
+    color: #388E3C;
+}
+
+/* Footer Vibrant */
+.footer-vibrant {
+    background-color: #222;
+    color: #eee;
+    padding: 60px 0 25px;
+    font-size: 0.95rem;
+}
+
+.footer-vibrant .footer-top-vibrant {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    margin-bottom: 45px;
+}
+
+.footer-col-vibrant h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: #FF5722;
+}
+
+.footer-col-vibrant p {
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.newsletter-form-vibrant {
+    display: flex;
+    margin-top: 15px;
+}
+
+.newsletter-form-vibrant input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.newsletter-form-vibrant button {
+    background-color: #2196F3; /* Electric Blue */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form-vibrant button:hover {
+    background-color: #1976D2;
+}
+
+.footer-col-vibrant ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col-vibrant ul a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-col-vibrant ul a:hover {
+    color: #fff;
+}
+
+.footer-bottom-vibrant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #444;
+    padding-top: 25px;
+    margin-top: 40px;
+}
+
+.social-icons-vibrant {
+    display: flex;
+    gap: 18px;
+}
+
+.social-icons-vibrant a {
+    color: #ccc;
+    font-size: 1.6rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons-vibrant a:hover {
+    color: #FF5722;
+    transform: translateY(-3px);
+}
+
+.copyright-vibrant {
+    color: #ccc;
+}
+
+/* Responsive Styles - Vibrant Theme */
+@media (max-width: 992px) {
+    .hero-content-vibrant h1 {
+        font-size: 3.5rem;
+    }
+    .hero-content-vibrant p {
+        font-size: 1.2rem;
+    }
+    .hero-buttons-vibrant {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn-vibrant {
+        width: 80%;
+        max-width: 300px;
+    }
+    .collection-grid-vibrant {
+        grid-template-columns: 1fr;
+    }
+    .collection-card-vibrant {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    .promo-section-vibrant h2 {
+        font-size: 2.5rem;
+    }
+    .promo-section-vibrant p {
+        font-size: 1.1rem;
+    }
+    .footer-bottom-vibrant {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .social-icons-vibrant {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-vibrant .container-vibrant {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navbar-vibrant .logo-vibrant {
+        margin-bottom: 20px;
+    }
+    .nav-links-vibrant {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        display: none;
+        margin-top: 20px;
+    }
+
+    .nav-links-vibrant.active {
+        display: flex;
+    }
+
+    .nav-links-vibrant li {
+        margin: 12px 0;
+    }
+    .nav-links-vibrant .cart-icon-vibrant {
+        margin: 12px 0 0 0;
+    }
+
+    .menu-toggle-vibrant {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 28px;
+    }
+
+    .menu-toggle-vibrant.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-7px, 7px);
+    }
+    .menu-toggle-vibrant.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle-vibrant.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-7px, -7px);
+    }
+
+    .hero-section-vibrant {
+        padding: 100px 20px;
+        min-height: 550px;
+    }
+    .hero-content-vibrant h1 {
+        font-size: 2.8rem;
+    }
+    .content-area-vibrant h2 {
+        font-size: 2.5rem;
+    }
+    .btn-vibrant {
+        width: 90%;
+    }
+    .newsletter-form-vibrant {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .newsletter-form-vibrant input, .newsletter-form-vibrant button {
+        border-radius: 5px;
+    }
+}

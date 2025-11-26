@@ -1,0 +1,368 @@
+/* General Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.btn-primary, .btn-secondary, .btn-shop {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    font-size: 1.1em;
+}
+
+.btn-primary:hover {
+    background-color: #388E3C;
+}
+
+.btn-secondary {
+    background-color: #8BC34A;
+    color: #fff;
+    border: none;
+    font-size: 0.9em;
+}
+
+.btn-secondary:hover {
+    background-color: #689F38;
+}
+
+.btn-shop {
+    background-color: #FFC107;
+    color: #333;
+    border: none;
+    margin-left: 20px;
+}
+
+.btn-shop:hover {
+    background-color: #FFB300;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #4CAF50;
+}
+
+.navbar .nav-links a {
+    color: #555;
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.navbar .nav-links a:hover {
+    color: #4CAF50;
+}
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4CAF50;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1500x600/4CAF50/FFFFFF?text=Taze+Market+Urunleri') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #eee;
+}
+
+/* Content Area - Sections */
+.content-area section {
+    padding: 80px 0;
+}
+
+.content-area section:nth-child(odd) {
+    background-color: #FFFDE7;
+}
+
+.content-area section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+/* Featured Products Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 0.95em;
+    color: #666;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+/* About Us Section */
+.about-us .about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* For responsiveness */
+}
+
+.about-us .about-content img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+.about-us .about-content div {
+    flex-grow: 1;
+}
+
+.about-us .about-content h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+.about-us .about-content p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.about-us .about-content ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.about-us .about-content ul li {
+    margin-bottom: 10px;
+    color: #4CAF50;
+    font-weight: 700;
+}
+
+.about-us .about-content ul li::before {
+    content: ''; /* No default bullet */
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.footer .footer-links a {
+    color: #eee;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.footer .footer-links a:hover {
+    color: #4CAF50;
+}
+
+.footer p {
+    margin-top: 25px;
+    color: #aaa;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .navbar .nav-links a {
+        margin-left: 15px;
+        font-size: 0.95em;
+    }
+    .btn-shop {
+        padding: 10px 20px;
+        margin-left: 10px;
+    }
+    .hero h1 {
+        font-size: 3em;
+    }
+    .hero p {
+        font-size: 1.1em;
+    }
+    .content-area section h2 {
+        font-size: 2em;
+    }
+    .about-us .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-us .about-content img {
+        max-width: 100%;
+    }
+    .about-us .about-content h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none; /* Hide nav links by default for mobile */
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 70px; /* Adjust based on navbar height */
+        left: 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding: 20px 0;
+    }
+    .navbar .nav-links a {
+        margin: 10px 20px;
+        color: #4CAF50;
+        text-align: center;
+    }
+    .navbar .nav-links a.btn-shop {
+        background-color: #4CAF50;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin: 10px auto;
+        width: fit-content;
+    }
+    /* Add a class 'active' to nav-links via JS for toggling */
+    .navbar .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block; /* Show menu toggle button */
+    }
+
+    .hero {
+        padding: 80px 20px;
+        min-height: 400px;
+    }
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-us .about-content ul {
+        padding-left: 0;
+        text-align: left;
+    }
+    .footer .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer .footer-links a {
+        margin: 0;
+    }
+}

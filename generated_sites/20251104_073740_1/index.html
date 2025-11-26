@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyaz Eşyalar - Zarif Ev Aletleri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: #2c3e50; /* Dark blue-grey */
+            background-color: #fefefe; /* Off-white background */
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #fefefe;
+            padding: 20px 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .navbar .nav-links a {
+            color: #555;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            padding-bottom: 5px;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #d4af37; /* Gold accent */
+            border-bottom: 2px solid #d4af37;
+        }
+
+        .navbar .nav-icons a {
+            color: #555;
+            margin-left: 20px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-icons a:hover {
+            color: #d4af37;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://via.placeholder.com/1500x650/f5f5f5/2c3e50?text=Premium+Ev+Çözümleri') no-repeat center center/cover;
+            color: #2c3e50;
+            text-align: center;
+            padding: 120px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 600px;
+            position: relative;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent white background for text */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #444;
+        }
+
+        .btn-elegant {
+            display: inline-block;
+            background-color: #d4af37; /* Gold accent */
+            color: #fff;
+            padding: 16px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: 1px solid #d4af37;
+        }
+
+        .btn-elegant:hover {
+            background-color: #c0a133; /* Darker gold */
+            transform: translateY(-2px);
+        }
+
+        /* Content Area */
+        .content-area {
+            padding: 80px 0;
+            background-color: #ecf0f1; /* Light grey background */
+        }
+
+        .content-area h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .content-area h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -15px;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #d4af37;
+            border-radius: 2px;
+        }
+
+        /* Features Section */
+        .features-section {
+            margin-bottom: 80px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .feature-item {
+            background-color: #fefefe;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .feature-item i {
+            font-size: 48px;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .feature-item p {
+            font-size: 17px;
+            color: #666;
+        }
+
+        /* Product Highlights */
+        .product-highlights {
+            margin-bottom: 60px;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .highlight-card {
+            background-color: #fefefe;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-card:hover {
+            transform: scale(1.02);
+        }
+
+        .highlight-card img {
+            max-width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid #eee;
+        }
+
+        .highlight-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            margin: 25px 20px 10px;
+            color: #2c3e50;
+        }
+
+        .highlight-card p {
+            font-size: 18px;
+            color: #555;
+            padding: 0 20px 25px;
+        }
+
+
+        /* Footer */
+        .footer {
+            background-color: #2c3e50; /* Dark blue-grey */
+            color: #fefefe;
+            padding: 60px 0 20px;
+            font-size: 16px;
+        }
+
+        .footer .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: #d4af37;
+        }
+
+        .footer-col p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #fefefe;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #d4af37;
+        }
+
+        .footer .social-links a {
+            color: #fefefe;
+            font-size: 20px;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-links a:hover {
+            color: #d4af37;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #3c526a;
+            font-size: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .navbar .nav-links {
+                display: none; /* Hide traditional nav links */
+            }
+            .navbar .container {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .navbar .logo {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            .navbar .nav-icons {
+                width: 100%;
+                text-align: center;
+            }
+            .navbar .nav-icons a {
+                margin: 0 15px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+            .hero p {
+                font-size: 20px;
+            }
+            .hero .container {
+                padding: 30px;
+            }
+
+            .content-area h2 {
+                font-size: 36px;
+            }
+
+            .footer .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-col ul {
+                margin-top: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 38px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .btn-elegant {
+                padding: 14px 25px;
+                font-size: 16px;
+            }
+            .content-area h2 {
+                font-size: 30px;
+            }
+            .feature-grid, .highlight-grid {
+                gap: 25px;
+            }
+            .feature-item i {
+                font-size: 40px;
+            }
+            .feature-item h3 {
+                font-size: 24px;
+            }
+            .highlight-card h3 {
+                font-size: 26px;
+            }
+            .highlight-card img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Elegance Home</a>
+            <nav class="nav-links">
+                <a href="#">Anasayfa</a>
+                <a href="#">Koleksiyon</a>
+                <a href="#">Hizmetler</a>
+                <a href="#">Galeri</a>
+                <a href="#">İletişim</a>
+            </nav>
+            <div class="nav-icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Evinize Yakışan Asil Seçimler</h1>
+            <p>Tasarımla teknolojiyi birleştiren üstün kaliteli beyaz eşyalar.</p>
+            <a href="#" class="btn-elegant">Koleksiyonu İncele</a>
+        </div>
+    </section>
+
+    <main class="content-area">
+        <div class="container">
+            <section class="features-section">
+                <h2>Neden Bizi Seçmelisiniz?</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-star"></i>
+                        <h3>Premium Kalite</h3>
+                        <p>Uzun ömürlü ve dayanıklı ürünler.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-palette"></i>
+                        <h3>Estetik Tasarım</h3>
+                        <p>Evinizin dekorasyonuna uyum sağlayan çizgiler.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Yenilikçi Teknoloji</h3>
+                        <p>Hayatınızı kolaylaştıran akıllı çözümler.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Müşteri Memnuniyeti</h3>
+                        <p>Satış öncesi ve sonrası destek.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-highlights">
+                <h2>Seçkin Ürün Grupları</h2>
+                <div class="highlight-grid">
+                    <div class="highlight-card">
+                        <img src="https://via.placeholder.com/400x300/f5f5f5/2c3e50?text=Premium+Buzdolabı" alt="Premium Buzdolabı">
+                        <h3>Akıllı Soğutma Sistemleri</h3>
+                        <p>Yiyeceklerinizi daha uzun süre taze tutan özel teknolojiler.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <img src="https://via.placeholder.com/400x300/f5f5f5/2c3e50?text=Zarif+Fırın" alt="Zarif Fırın">
+                        <h3>Entegre Pişirme Çözümleri</h3>
+                        <p>Şık görünümleri ve profesyonel pişirme fonksiyonları.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col">
+                <h3>Elegance Home</h3>
+                <p>Evinize değer katın.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Hızlı Erişim</h3>
+                <ul>
+                    <li><a href="#">Anasayfa</a></li>
+                    <li><a href="#">Ürünler</a></li>
+                    <li><a href="#">Hakkımızda</a></li>
+                    <li><a href="#">Gizlilik Politikası</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>İletişim</h3>
+                <p>Adres: Örnek Cad. No:123, Şehir</p>
+                <p>Telefon: +90 555 123 45 67</p>
+                <p>Email: info@elegancehome.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Elegance Home. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,404 @@
+/* General Styles - Eco Theme */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.7;
+    color: #333;
+    background-color: #f7fcf9; /* Light green-white */
+}
+
+.container-eco {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: #2c3e50; /* Darker blue-gray */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn-eco {
+    display: inline-block;
+    background-color: #4CAF50; /* Green */
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 50px; /* Rounded button */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-eco:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.btn-eco-small {
+    padding: 10px 20px;
+    font-size: 0.9em;
+}
+
+/* Navbar - Eco Theme */
+.navbar-eco {
+    background-color: #fff;
+    padding: 18px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-eco .container-eco {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-eco .logo-eco {
+    font-size: 2em;
+    font-weight: 700;
+    color: #4CAF50;
+}
+
+.nav-links-eco {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links-eco li {
+    margin-left: 35px;
+}
+
+.nav-links-eco a {
+    font-weight: 400;
+    color: #607D8B;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links-eco a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #4CAF50;
+    transition: width 0.3s ease;
+}
+
+.nav-links-eco a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #4CAF50;
+}
+
+.hamburger-eco {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-eco span {
+    height: 3px;
+    width: 25px;
+    background-color: #4CAF50;
+    margin-bottom: 5px;
+    border-radius: 2px;
+}
+
+/* Hero Section - Eco Theme */
+.hero-section-eco {
+    background: linear-gradient(rgba(76, 175, 80, 0.7), rgba(76, 175, 80, 0.7)), url('https://via.placeholder.com/1600x900?text=Eco+Smart+Home') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 160px 0;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-bottom: 40px;
+}
+
+.hero-section-eco h1 {
+    font-size: 3.8em;
+    margin-bottom: 25px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero-section-eco p {
+    font-size: 1.4em;
+    margin-bottom: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+}
+
+/* Content Area - Why Us */
+.why-us-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.why-us-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 60px;
+}
+
+.reason-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.reason-item {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reason-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.reason-item i {
+    font-size: 3.5em;
+    color: #4CAF50;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.reason-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.reason-item p {
+    color: #555;
+}
+
+/* Content Area - Product Gallery */
+.product-gallery-eco {
+    padding: 80px 0;
+}
+
+.product-gallery-eco h2 {
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: 60px;
+}
+
+.product-grid-eco {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.product-card-eco {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card-eco:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.product-card-eco img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.product-card-eco h3 {
+    font-size: 1.6em;
+    margin: 25px 0 10px;
+}
+
+.product-card-eco p {
+    padding: 0 25px;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.product-card-eco .btn-eco {
+    margin-bottom: 30px;
+}
+
+/* Testimonials */
+.testimonials-section-eco {
+    background-color: #e8f5e9; /* Light green background */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.testimonials-section-eco h2 {
+    font-size: 2.8em;
+    margin-bottom: 60px;
+    color: #2c3e50;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.testimonial-card p {
+    font-size: 1.25em;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.testimonial-card span {
+    font-weight: 700;
+    color: #4CAF50;
+    font-size: 1.1em;
+}
+
+/* Footer - Eco Theme */
+.footer-eco {
+    background-color: #2c3e50; /* Dark blue-gray */
+    color: #ecf0f1; /* Light gray */
+    padding: 60px 0;
+}
+
+.footer-content-eco {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    color: #4CAF50;
+    font-size: 1.6em;
+    margin-bottom: 25px;
+}
+
+.footer-col p, .footer-col ul li a {
+    color: #bdc3c7;
+    font-weight: 300;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.social-icons-eco a {
+    color: #ecf0f1;
+    font-size: 1.5em;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-eco a:hover {
+    color: #4CAF50;
+}
+
+.copyright-eco {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #34495e;
+    color: #95a5a6;
+    font-size: 0.9em;
+}
+
+/* Responsive - Eco Theme */
+@media (max-width: 768px) {
+    .navbar-eco .nav-links-eco {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .navbar-eco .nav-links-eco.active {
+        display: flex;
+    }
+
+    .nav-links-eco li {
+        margin: 0;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .nav-links-eco li:last-child {
+        border-bottom: none;
+    }
+
+    .hamburger-eco {
+        display: flex;
+    }
+
+    .hero-section-eco h1 {
+        font-size: 2.8em;
+    }
+
+    .hero-section-eco p {
+        font-size: 1.1em;
+    }
+
+    .why-us-section h2, .product-gallery-eco h2, .testimonials-section-eco h2 {
+        font-size: 2em;
+    }
+
+    .reason-grid, .product-grid-eco, .footer-content-eco {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-col ul {
+        margin-bottom: 20px;
+    }
+
+    .social-icons-eco {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .social-icons-eco a {
+        margin: 0 10px;
+    }
+}

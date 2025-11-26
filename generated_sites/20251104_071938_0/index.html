@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleek Tech - Akıllı Telefon Merkezi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand">Akıllı Telefon Merkezi</a>
+            <ul class="navbar-nav">
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#products">Ürünler</a></li>
+                <li><a href="#reviews">İncelemeler</a></li>
+                <li><a href="#about">Hakkımızda</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+            <div class="navbar-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container">
+            <h1>Geleceğin Akıllı Telefonları Burada</h1>
+            <p>En yeni teknolojiyi keşfedin, performans ve tasarımda sınırları zorlayan cihazlarla tanışın.</p>
+            <a href="#products" class="btn btn-primary">Ürünleri Keşfet</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="products" class="content-section products-grid">
+            <div class="container">
+                <h2>Son Teknoloji Ürünler</h2>
+                <div class="grid-container">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200/222222/FFFFFF?text=Model+X" alt="Akıllı Telefon Model X">
+                        <h3>Model X Pro</h3>
+                        <p>Yüksek performans, çarpıcı kamera özellikleri ve şık tasarım.</p>
+                        <a href="#" class="btn btn-secondary">Detaylar</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200/222222/FFFFFF?text=Model+Y" alt="Akıllı Telefon Model Y">
+                        <h3>Model Y Max</h3>
+                        <p>Uzun pil ömrü, büyük ekran ve kusursuz kullanıcı deneyimi.</p>
+                        <a href="#" class="btn btn-secondary">Detaylar</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200/222222/FFFFFF?text=Model+Z" alt="Akıllı Telefon Model Z">
+                        <h3>Model Z Lite</h3>
+                        <p>Uygun fiyatlı, güçlü işlemci ve günlük kullanım için ideal.</p>
+                        <a href="#" class="btn btn-secondary">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="content-section features-list">
+            <div class="container">
+                <h2>Neden Bizi Seçmelisiniz?</h2>
+                <div class="features-container">
+                    <div class="feature-item">
+                        <h3><i class="icon">🚀</i> Yenilikçi Teknoloji</h3>
+                        <p>En son mobil teknolojileri sizinle buluşturuyoruz.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3><i class="icon">✨</i> Üstün Tasarım</h3>
+                        <p>Estetik ve fonksiyonelliği bir araya getiren cihazlar.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3><i class="icon">🔒</i> Güvenli Alışveriş</h3>
+                        <p>Sorunsuz ve güvenli bir alışveriş deneyimi sunuyoruz.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3><i class="icon">📞</i> Müşteri Desteği</h3>
+                        <p>Her adımda yanınızda olan profesyonel destek ekibimiz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Akıllı Telefon Merkezi. Tüm hakları saklıdır.</p>
+            <ul class="footer-links">
+                <li><a href="#">Gizlilik Politikası</a></li>
+                <li><a href="#">Kullanım Koşulları</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.navbar-toggler').addEventListener('click', () => {
+            document.querySelector('.navbar-nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

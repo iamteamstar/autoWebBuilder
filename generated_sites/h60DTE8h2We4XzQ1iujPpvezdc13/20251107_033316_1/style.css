@@ -1,0 +1,456 @@
+/* General Reset & Base Styles - Urban */
+.navbar-urban, .hero-urban, .content-area-urban, .footer-urban {
+    /* Scoping to avoid conflicts with other templates */
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #F5F7FA;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+/* Buttons Urban */
+.btn-primary-urban, .btn-secondary-urban, .btn-add-urban {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-primary-urban {
+    background-color: #FF7F11;
+    color: #fff;
+    border-color: #FF7F11;
+}
+
+.btn-primary-urban:hover {
+    background-color: #e6720d;
+    transform: translateY(-2px);
+}
+
+.btn-secondary-urban {
+    background-color: transparent;
+    color: #FF7F11;
+    border-color: #FF7F11;
+    margin-left: 15px;
+}
+
+.btn-secondary-urban:hover {
+    background-color: #FF7F11;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-add-urban {
+    background-color: #00509E;
+    color: #fff;
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-size: 0.9em;
+    margin-top: 15px;
+}
+
+.btn-add-urban:hover {
+    background-color: #003a73;
+}
+
+/* Navbar Urban */
+.navbar-urban {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-urban .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-urban .logo-urban {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: #003366;
+}
+
+.navbar-urban .nav-links-urban a {
+    color: #444;
+    margin: 0 20px;
+    font-weight: 600;
+    font-size: 1.05em;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-urban .nav-links-urban a:hover {
+    color: #FF7F11;
+}
+
+.navbar-urban .nav-links-urban a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #FF7F11;
+    transition: width 0.3s ease;
+}
+
+.navbar-urban .nav-links-urban a:hover::after {
+    width: 100%;
+}
+
+.navbar-urban .nav-icons-urban {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.navbar-urban .nav-icons-urban a:hover {
+    color: #FF7F11;
+}
+
+.menu-toggle-urban {
+    display: none;
+    font-size: 1.8em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #003366;
+}
+
+/* Hero Section Urban */
+.hero-urban {
+    background: linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.8)), url('https://via.placeholder.com/1600x650/003366/FFFFFF?text=Urban+Grocery+Hero') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+}
+
+.hero-content-urban {
+    max-width: 900px;
+}
+
+.hero-urban h1 {
+    font-size: 4em;
+    margin-bottom: 25px;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.hero-urban p {
+    font-size: 1.4em;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+.hero-ctas-urban {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Content Area - Sections Urban */
+.content-area-urban section {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.content-area-urban section:nth-child(even) {
+    background-color: #EBF2F7;
+}
+
+.content-area-urban section h2 {
+    font-size: 3em;
+    margin-bottom: 60px;
+    color: #003366;
+    position: relative;
+    display: inline-block;
+}
+
+.content-area-urban section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    width: 80px;
+    height: 4px;
+    background-color: #FF7F11;
+    border-radius: 2px;
+}
+
+/* Category Showcase Urban */
+.category-grid-urban {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.category-card-urban {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card-urban:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.category-card-urban i {
+    font-size: 3.5em;
+    color: #FF7F11;
+    margin-bottom: 20px;
+}
+
+.category-card-urban h3 {
+    font-size: 1.8em;
+    color: #00509E;
+    margin-bottom: 10px;
+}
+
+.category-card-urban p {
+    color: #666;
+}
+
+/* Featured Deals Urban */
+.deal-grid-urban {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.deal-card-urban {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.deal-card-urban:hover {
+    transform: translateY(-5px);
+}
+
+.deal-card-urban img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.deal-card-urban h4 {
+    font-size: 1.5em;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.price-urban {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #FF7F11;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.price-urban del {
+    color: #999;
+    font-weight: 400;
+    margin-left: 8px;
+    font-size: 0.8em;
+}
+
+/* Footer Urban */
+.footer-urban {
+    background-color: #003366;
+    color: #fff;
+    padding: 60px 0;
+    font-size: 0.95em;
+}
+
+.footer-urban .footer-cols-urban {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-urban .footer-col-urban h3 {
+    color: #FF7F11;
+    margin-bottom: 25px;
+    font-size: 1.6em;
+}
+
+.footer-urban .footer-col-urban p {
+    margin-bottom: 15px;
+    color: #bbb;
+}
+
+.footer-urban .footer-col-urban ul li {
+    margin-bottom: 10px;
+}
+
+.footer-urban .footer-col-urban ul li a {
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.footer-urban .footer-col-urban ul li a:hover {
+    color: #FF7F11;
+}
+
+.social-urban {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-urban a {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-urban a:hover {
+    color: #FF7F11;
+}
+
+.copyright-urban {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #aaa;
+    margin-top: 40px;
+}
+
+/* Responsive Design - Urban */
+@media (max-width: 992px) {
+    .navbar-urban .nav-links-urban a {
+        margin: 0 12px;
+        font-size: 1em;
+    }
+    .navbar-urban .nav-icons-urban {
+        gap: 15px;
+        font-size: 1.1em;
+    }
+    .hero-urban h1 {
+        font-size: 3em;
+    }
+    .hero-urban p {
+        font-size: 1.2em;
+    }
+    .content-area-urban section h2 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-urban .nav-links-urban {
+        display: none; /* Hidden on mobile by default, assume JS toggle */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding: 20px 0;
+    }
+    .navbar-urban .nav-links-urban a {
+        margin: 10px 20px;
+        color: #003366;
+        text-align: center;
+    }
+    .navbar-urban .nav-links-urban a::after {
+        background-color: #003366;
+    }
+    .navbar-urban .nav-icons-urban {
+        display: none; /* Hide icons on mobile for simplicity, could be part of mobile nav */
+    }
+    .menu-toggle-urban {
+        display: block;
+    }
+
+    .hero-urban {
+        padding: 80px 20px;
+        min-height: 450px;
+    }
+    .hero-urban h1 {
+        font-size: 2.5em;
+    }
+    .hero-urban p {
+        font-size: 1em;
+    }
+    .hero-ctas-urban {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn-secondary-urban {
+        margin-left: 0;
+    }
+
+    .category-grid-urban, .deal-grid-urban {
+        grid-template-columns: 1fr;
+    }
+    .content-area-urban section h2 {
+        font-size: 2em;
+    }
+    .footer-urban .footer-cols-urban {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-urban .footer-col-urban .social-urban {
+        justify-content: center;
+    }
+}

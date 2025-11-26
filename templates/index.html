@@ -1,21 +1,323 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Otomatik Web Sitesi Oluşturucu</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta charset="UTF-8">
+  <title>Otomatik Web Sitesi Oluşturucu</title>
+  <meta name="user-id" content="{{ session.get('user_id', 'guest') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <style>
+    /* 🔹 Modal önizleme tasarımı */
+    .modal {
+      display: none;
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: fadeIn 0.25s ease;
+    }
+    .modal-content {
+      display: flex;
+  flex-direction: column;
+  width: 96%;
+  height: 94vh;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+  position: relative;
+    }
+    .modal-header {
+       background: #1e1e1e;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+    }
+    .close-btn {
+      cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  padding: 0 10px;
+  transition: 0.2s;
+    }
+    .close-btn:hover {
+  color: #ff5555;
+}
+    .modal-body {
+      flex: 1;
+  background: #fff;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      overflow-y: auto;
+    }
+    .toolbar {
+       display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 15px;
+  background: #f8f9fa;
+  border-top: 1px solid #ddd;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+    }
+    .toolbar button,
+    .toolbar input {
+      margin: 5px;
+    }
+    @keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+.new-section {
+  padding: 12px;
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+.new-section h4 {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.new-section input[type="text"],
+.new-section textarea {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.new-section textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+.new-section .media-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.new-section button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.new-section button:hover {
+  background: #0056b3;
+}
+
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🧠 Otomatik Web Sitesi Oluşturucu</h1>
-        <p>Konu girin, yapay zekâ sizin için web sitesi alternatifleri oluştursun.</p>
 
-        <input type="text" id="topic" placeholder="Örn: Yapay zekâ üzerine teknoloji sitesi">
-        <button id="generateBtn">Oluştur</button>
+{% if session.get('user_id') %}
+<div class="top-bar">
+  <span>👋 Hoş geldin, {{ session.get('email') }}</span>
+  | <a href="/profile">Profilim</a>
+  | <a href="/logout" style="color:red;">Çıkış Yap</a>
+</div>
+{% endif %}
 
-        <div id="results"></div>
+<div class="container">
+  <h1>🧠 Otomatik Web Sitesi Oluşturucu</h1>
+  <p>Konu girin, yapay zekâ sizin için web sitesi alternatifleri oluştursun.</p>
+
+  <input type="text" id="topic" placeholder="Örn: Yapay zekâ üzerine teknoloji sitesi">
+  <button id="generateBtn">Oluştur</button> <br><br>
+  <button id="historyBtn" style="margin-left:10px;">Geçmiş Siteleri Görüntüle</button>
+<button id="savedSitesBtn" style="margin-left:10px; background-color:#28a745; color:white; border:none; padding:8px 14px; border-radius:5px; cursor:pointer;">
+  💾 Kaydedilen Siteleri Gör
+</button>
+
+<script>
+  document.getElementById("savedSitesBtn").addEventListener("click", () => {
+    window.location.href = "/saved_sites";
+  });
+</script>
+
+  <div id="results"></div>
+</div>
+
+
+<!-- 🔹 Önizleme Modal -->
+<div id="previewModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>🌐 Site Önizleme</h3>
+      <span class="close-btn" onclick="closeModal()">&times;</span>
     </div>
 
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <!-- 🔸 İçerik: Önizleme (sol) + Araç Kutusu (sağ) -->
+    <div class="modal-body" style="display:flex; overflow:hidden;">
+      <iframe id="previewFrame" style="flex:1; border:none;"></iframe>
+
+      <!-- 🧰 Sağ Araç Kutusu -->
+      <div class="toolbox-panel" id="toolbox">
+        <h4>🧩 Araç Kutusu</h4>
+
+        <div class="toolbox-section">
+          <button onclick="saveFavorite()">⭐ Favorilere Ekle</button>
+        </div>
+
+        <div class="toolbox-section">
+          <label>Tema Rengi</label>
+          <input type="color" id="themeColor" onchange="applyTheme()">
+        </div>
+
+        <div class="toolbox-section">
+          <label>Logo Yükle</label>
+          <input type="file" id="logoUpload" accept="image/*" onchange="updateLogo()">
+        </div>
+
+        <div class="toolbox-section">
+          <label>Site Başlığı</label>
+          <input type="text" id="siteTitle" placeholder="Yeni Başlık..." onblur="updateTitle()">
+        </div>
+
+        <hr>
+
+        <div class="toolbox-section">
+          <h4>🆕 Yeni İçerik Ekle</h4>
+          <input type="text" id="newSectionTitle" placeholder="Başlık (örn: Biz Kimiz?)">
+          <textarea id="newSectionDesc" placeholder="Açıklama..."></textarea>
+
+            
+          <div class="media-options">
+            <input type="file" id="newSectionImage" accept="image/*">
+            <select id="imagePosition">
+              <option value="left">Görsel Solda</option>
+              <option value="right">Görsel Sağda</option>
+            </select>
+          </div>
+          <button id="addSectionBtn">Ekle</button>
+        </div>
+        <div class="toolbox-section">
+  <hr>
+  <button id="saveEditedSiteBtn" style="background:#28a745;">💾 Değişiklikleri Kaydet</button>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* 🔧 Sağ Panel Tasarımı */
+.toolbox-panel {
+  width: 320px;
+  background: #f8f9fa;
+  border-left: 2px solid #ddd;
+  padding: 15px;
+  overflow-y: auto;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+}
+.toolbox-panel h4 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+.toolbox-section {
+  margin-bottom: 15px;
+}
+.toolbox-section input[type="text"],
+.toolbox-section textarea,
+.toolbox-section select {
+  width: 100%;
+  margin-top: 5px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.toolbox-section textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+.toolbox-panel button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+.toolbox-panel button:hover {
+  background: #0056b3;
+}
+</style>
+
+
+    <!-- <div class="toolbar">
+      <button onclick="saveFavorite()">⭐ Favorilere Ekle</button>
+      <label>Tema Rengi: <input type="color" id="themeColor" onchange="applyTheme()"></label>
+      <label>Logo: <input type="file" id="logoUpload" accept="image/*" onchange="updateLogo()"></label>
+      <input type="text" id="siteTitle" placeholder="Yeni Başlık..." onblur="updateTitle()">
+    </div> -->
+    <!-- 🧰 Metin Stil Araç Çubuğu -->
+<div id="textToolbar" class="toolbar-floating" style="display:none;">
+  <button onclick="applyTextStyle('bold')">B</button>
+  <button onclick="applyTextStyle('italic')"><i>I</i></button>
+  <button onclick="applyTextStyle('underline')"><u>U</u></button>
+  <input type="color" id="textColor" title="Yazı Rengi Değiştir">
+  <select id="fontFamily" title="Yazı Tipi">
+    <option value="">Font Seç</option>
+    <option value="Poppins, sans-serif">Poppins</option>
+    <option value="Open Sans, sans-serif">Open Sans</option>
+    <option value="Roboto, sans-serif">Roboto</option>
+    <option value="Georgia, serif">Georgia</option>
+    <option value="Courier New, monospace">Courier New</option>
+  </select>
+  <select id="fontSize" title="Boyut">
+    <option value="">Boyut</option>
+    <option value="14px">Küçük</option>
+    <option value="18px">Orta</option>
+    <option value="24px">Büyük</option>
+    <option value="32px">Çok Büyük</option>
+  </select>
+  <button onclick="closeTextToolbar()">✖</button>
+</div>
+
+
+<!-- 🧱 Yeni İçerik Ekle Alanı -->
+<!-- <div id="newSectionArea" class="new-section">
+  <h4>🆕 Yeni İçerik Ekle</h4>
+
+  <input type="text" id="newSectionTitle" placeholder="Başlık (örn: Biz Kimiz?)">
+  <textarea id="newSectionDesc" placeholder="Açıklama..."></textarea>
+
+  <div class="media-options">
+    <input type="file" id="newSectionImage" accept="image/*">
+    <select id="imagePosition">
+      <option value="left">Görsel Solda</option>
+      <option value="right">Görsel Sağda</option>
+    </select>
+  </div>
+
+  <button id="addSectionBtn">Ekle</button>
+</div> -->
+
+  </div>
+</div>
+
+<!-- 🔹 Tüm JS mantığı artık main.js içinde -->
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

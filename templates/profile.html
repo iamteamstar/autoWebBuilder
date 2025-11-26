@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil ve Ayarlar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+            padding: 0;
+            color: #1a1a1a;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            margin-bottom: 40px;
+        }
+
+        .header h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: -0.5px;
+        }
+
+        .header-subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        .profile-section {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e8eaed;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e8eaed;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0;
+        }
+
+        .profile-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .info-field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .field-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .field-value {
+            font-size: 15px;
+            font-weight: 500;
+            color: #1a1a1a;
+            padding: 12px 16px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #e8eaed;
+        }
+
+        .password-section {
+            background: #fafbfc;
+            border: 1px solid #e8eaed;
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .password-label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #999;
+            margin-bottom: 12px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+        }
+
+        input[type="password"] {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #d0d0d0;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: all 0.2s ease;
+            outline: none;
+            background: white;
+        }
+
+        input[type="password"]:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: inherit;
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #2563eb;
+            border: 1.5px solid #2563eb;
+        }
+
+        .btn-secondary:hover {
+            background: #f0f7ff;
+        }
+
+        .btn-danger {
+            background: #dc2626;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #b91c1c;
+        }
+
+        .sites-section {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e8eaed;
+        }
+
+        .sites-grid {
+            display: grid;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .site-card {
+            background: #fafbfc;
+            border: 1px solid #e8eaed;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-card:hover {
+            border-color: #2563eb;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+            background: white;
+        }
+
+        .site-info {
+            flex: 1;
+        }
+
+        .site-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .site-date {
+            font-size: 13px;
+            color: #999;
+        }
+
+        .site-actions {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 13px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .empty-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.4;
+        }
+
+        .empty-text {
+            font-size: 15px;
+            color: #999;
+        }
+
+        .saved-sites-btn {
+            margin-top: 24px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .divider {
+            height: 1px;
+            background: #e8eaed;
+            margin: 24px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 24px 16px;
+            }
+
+            .profile-section, .sites-section {
+                padding: 24px;
+            }
+
+            .profile-info-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .header h2 {
+                font-size: 24px;
+            }
+
+            .input-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            button {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .site-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .site-actions {
+                width: 100%;
+                flex-direction: column;
+                margin-top: 16px;
+            }
+
+            .btn-small {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 16px 12px;
+            }
+
+            .profile-section, .sites-section {
+                padding: 16px;
+                border-radius: 12px;
+            }
+
+            .header h2 {
+                font-size: 20px;
+            }
+
+            .section-title {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Profil ve Ayarlar</h2>
+            <div class="header-subtitle">Hesap bilgilerini yönet ve sitelerinizi görüntüleyin</div>
+        </div>
+
+        <div class="profile-section">
+            <div class="section-header">
+                <span style="font-size: 20px;">👤</span>
+                <h3 class="section-title">Hesap Bilgileri</h3>
+            </div>
+
+            <div class="profile-info-grid">
+                <div class="info-field">
+                    <label class="field-label">E-posta</label>
+                    <div class="field-value">{{ user_email }}</div>
+                </div>
+                <div class="info-field">
+                    <label class="field-label">Kullanıcı ID</label>
+                    <div class="field-value">{{ user_id }}</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section-header" style="border-bottom: none; padding-bottom: 0; margin-bottom: 16px;">
+                <span style="font-size: 20px;">🔑</span>
+                <h3 class="section-title">Şifre Değiştir</h3>
+            </div>
+
+            <div class="password-section">
+                <label class="password-label">Yeni Şifre</label>
+                <div class="input-group">
+                    <input type="password" id="newPassword" placeholder="Yeni şifrenizi girin">
+                    <button class="btn-primary" onclick="changePassword()">Güncelle</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="sites-section">
+            <div class="section-header">
+                <span style="font-size: 20px;">📂</span>
+                <h3 class="section-title">Sitelerim</h3>
+            </div>
+
+            {% if sites %}
+                <div class="sites-grid">
+                    {% for s in sites %}
+                    <div class="site-card" id="site-{{ s.id }}">
+                        <div class="site-info">
+                            <div class="site-title">{{ s.title }}</div>
+                            <div class="site-date">{{ s.created }}</div>
+                        </div>
+                        <div class="site-actions">
+                            <a href="/generated_sites/{{ user_id }}/{{ s.id }}/index.html" target="_blank">
+                                <button class="btn-secondary btn-small">Önizle</button>
+                            </a>
+                            <a href="/download/{{ s.id }}">
+                                <button class="btn-secondary btn-small">İndir</button>
+                            </a>
+                            <button class="btn-danger btn-small" onclick="deleteSite('{{ s.id }}')">Sil</button>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="empty-state">
+                    <div class="empty-icon">📭</div>
+                    <div class="empty-text">Henüz oluşturduğunuz bir site yok</div>
+                </div>
+            {% endif %}
+
+            <button class="btn-primary saved-sites-btn" onclick="window.location.href='/saved_sites'">
+                💾 Kaydedilen Siteleri Gör
+            </button>
+        </div>
+    </div>
+
+    <script>
+    async function changePassword() {
+        const new_password = document.getElementById('newPassword').value.trim();
+        if (!new_password) return alert("Lütfen yeni şifrenizi girin.");
+        const res = await fetch('/change_password', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({new_password})
+        });
+        const data = await res.json();
+        if (res.ok) {
+            alert(data.message);
+            document.getElementById('newPassword').value = '';
+        } else {
+            alert("Hata: " + data.error);
+        }
+    }
+
+    async function deleteSite(id) {
+        if (!confirm("Bu siteyi silmek istediğine emin misin?")) return;
+        const res = await fetch(`/delete_site/${id}`, { method: 'DELETE' });
+        const data = await res.json();
+        if (res.ok) {
+            alert(data.message);
+            const element = document.getElementById(`site-${id}`);
+            element.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => element.remove(), 300);
+        } else {
+            alert("Hata: " + data.error);
+        }
+    }
+    </script>

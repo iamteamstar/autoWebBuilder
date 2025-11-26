@@ -1,0 +1,225 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #f8f9fa;
+    --text-color: #333;
+    --light-gray: #f2f2f2;
+    --dark-gray: #666;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid var(--light-gray);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar .logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero .btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #0056b3; /* Darker shade of primary */
+}
+
+/* Content Area */
+.content-area {
+    padding: 50px 0;
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.phone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.phone-card {
+    background-color: white;
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.phone-card:hover {
+    transform: translateY(-5px);
+}
+
+.phone-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.phone-card-body {
+    padding: 20px;
+}
+
+.phone-card-body h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.phone-card-body p {
+    font-size: 0.95rem;
+    color: var(--dark-gray);
+}
+
+.phone-card-body .read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.footer .social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        margin-top: 15px;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .nav-links a {
+        margin: 0 10px;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .phone-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+    .hero {
+        padding: 60px 15px;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .phone-card-body h3 {
+        font-size: 1.2rem;
+    }
+    .phone-card-body p {
+        font-size: 0.85rem;
+    }
+}

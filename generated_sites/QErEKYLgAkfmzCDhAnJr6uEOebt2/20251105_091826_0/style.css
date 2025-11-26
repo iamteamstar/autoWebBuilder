@@ -1,0 +1,320 @@
+/* Minimalist Isı - CSS */
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #f0f2f5;
+    --text-color: #333;
+    --light-text-color: #666;
+    --background-color: #ffffff;
+    --dark-background-color: #2c3e50;
+    --accent-color: #0056b3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar-minimalist {
+    background-color: var(--background-color);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--secondary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-minimalist .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-minimalist {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-list-minimalist {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list-minimalist li {
+    margin-left: 30px;
+}
+
+.nav-list-minimalist a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-list-minimalist a:hover {
+    color: var(--primary-color);
+}
+
+.menu-toggle-minimalist {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle-minimalist span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero-minimalist {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x600/3498db/ffffff?text=Modern+Isıtıcı') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-minimalist h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero-minimalist p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Buttons */
+.btn-minimalist-primary, .btn-minimalist-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-minimalist-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-minimalist-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-minimalist-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-minimalist-secondary:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Content Area */
+.content-area-minimalist {
+    padding: 80px 0;
+}
+
+.content-area-minimalist h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--text-color);
+}
+
+/* Features Grid */
+.features-grid-minimalist {
+    margin-bottom: 80px;
+}
+
+.grid-items-minimalist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-item-minimalist {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature-item-minimalist:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item-minimalist h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.feature-item-minimalist p {
+    font-size: 1rem;
+    color: var(--light-text-color);
+}
+
+/* About Us */
+.about-us-minimalist {
+    text-align: center;
+    padding: 50px 0;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+}
+
+.about-us-minimalist p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    color: var(--light-text-color);
+}
+
+/* Footer */
+.footer-minimalist {
+    background-color: var(--dark-background-color);
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-minimalist .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-links-minimalist a {
+    margin-left: 15px;
+}
+
+.social-links-minimalist img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.social-links-minimalist img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-minimalist .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo-minimalist {
+        margin-bottom: 15px;
+    }
+
+    .nav-minimalist {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list-minimalist {
+        flex-direction: column;
+        display: none; /* Hidden by default for mobile */
+        width: 100%;
+    }
+
+    .nav-list-minimalist.active {
+        display: flex;
+    }
+
+    .nav-list-minimalist li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle-minimalist {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+
+    .hero-minimalist {
+        padding: 80px 20px;
+    }
+
+    .hero-minimalist h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-minimalist p {
+        font-size: 1rem;
+    }
+
+    .content-area-minimalist {
+        padding: 60px 0;
+    }
+
+    .content-area-minimalist h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .about-us-minimalist {
+        padding: 30px;
+    }
+
+    .footer-minimalist .container {
+        flex-direction: column;
+    }
+
+    .footer-minimalist p {
+        margin-bottom: 15px;
+    }
+
+    .social-links-minimalist a {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-minimalist h1 {
+        font-size: 2rem;
+    }
+
+    .btn-minimalist-primary, .btn-minimalist-secondary {
+        padding: 10px 20px;
+    }
+}

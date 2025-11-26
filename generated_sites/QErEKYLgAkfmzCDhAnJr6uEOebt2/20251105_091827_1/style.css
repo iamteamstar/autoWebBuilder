@@ -1,0 +1,443 @@
+/* Dinamik Enerji - CSS */
+
+:root {
+    --primary-color-bold: #e94560;
+    --secondary-color-bold: #1a1a2e;
+    --text-color-bold: #1a1a2e;
+    --light-text-color-bold: #6e7888;
+    --background-color-bold: #f0f4f8;
+    --white-color-bold: #ffffff;
+    --accent-color-bold: #0f3460;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: var(--text-color-bold);
+    background-color: var(--background-color-bold);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar-bold {
+    background: linear-gradient(to right, var(--secondary-color-bold), var(--accent-color-bold));
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-bold .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-bold {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color-bold);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-list-bold {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list-bold li {
+    margin-left: 35px;
+}
+
+.nav-list-bold a {
+    color: var(--white-color-bold);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-list-bold a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--primary-color-bold);
+    transition: width 0.3s ease;
+}
+
+.nav-list-bold a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle-bold {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 1001; /* Ensure toggle is above collapsed menu */
+}
+
+.menu-toggle-bold span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--white-color-bold);
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle-bold span:last-child {
+    margin-bottom: 0;
+}
+
+/* Hero Section */
+.hero-bold {
+    background: url('https://via.placeholder.com/1500x700/1a1a2e/e94560?text=Smart+Heating') no-repeat center center/cover;
+    color: var(--white-color-bold);
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left; /* Default alignment */
+    position: relative;
+}
+
+.hero-bold::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-bold .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+.hero-content-bold {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 40px;
+}
+
+.hero-content-bold h1 {
+    font-size: 3.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-content-bold p {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.hero-image-bold img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons */
+.btn-bold-primary, .btn-bold-secondary {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-bold-primary {
+    background-color: var(--primary-color-bold);
+    color: var(--white-color-bold);
+    border: 2px solid var(--primary-color-bold);
+}
+
+.btn-bold-primary:hover {
+    background-color: var(--white-color-bold);
+    color: var(--primary-color-bold);
+}
+
+.btn-bold-secondary {
+    background-color: var(--accent-color-bold);
+    color: var(--white-color-bold);
+    border: 2px solid var(--accent-color-bold);
+}
+
+.btn-bold-secondary:hover {
+    background-color: var(--primary-color-bold);
+    border-color: var(--primary-color-bold);
+}
+
+/* Content Area */
+.content-area-bold {
+    padding: 80px 0;
+}
+
+.content-area-bold h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 60px;
+    color: var(--text-color-bold);
+    font-weight: 700;
+}
+
+/* Features Dynamic */
+.features-dynamic {
+    margin-bottom: 80px;
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-dynamic {
+    background-color: var(--white-color-bold);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-dynamic:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--primary-color-bold);
+}
+
+.card-dynamic h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--text-color-bold);
+}
+
+.card-dynamic p {
+    font-size: 1rem;
+    color: var(--light-text-color-bold);
+}
+
+/* Call to Action */
+.call-to-action-bold {
+    background: linear-gradient(to right, var(--primary-color-bold), #FF7F50); /* A gradient for more energy */
+    color: var(--white-color-bold);
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.call-to-action-bold h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--white-color-bold);
+}
+
+/* Footer */
+.footer-bold {
+    background-color: var(--secondary-color-bold);
+    color: var(--white-color-bold);
+    padding: 40px 0;
+    font-size: 0.9rem;
+}
+
+.footer-bold .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links-bold a {
+    color: var(--white-color-bold);
+    text-decoration: none;
+    margin-left: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links-bold a:hover {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-bold .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content-bold {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .hero-image-bold img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-bold .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo-bold {
+        margin-bottom: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list-bold {
+        flex-direction: column;
+        display: none; /* Hidden by default */
+        width: 100%;
+        background-color: var(--secondary-color-bold);
+        position: absolute;
+        left: 0;
+        top: 60px; /* Adjust based on navbar height */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-list-bold.active {
+        display: flex;
+    }
+
+    .nav-list-bold li {
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-list-bold a {
+        display: block;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .nav-list-bold a::after {
+        bottom: 5px; /* Adjust underline position for mobile */
+    }
+
+    .menu-toggle-bold {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    /* Menu toggle animation */
+    .menu-toggle-bold.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .menu-toggle-bold.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle-bold.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .hero-bold {
+        padding: 80px 20px;
+    }
+
+    .hero-content-bold h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-content-bold p {
+        font-size: 1.1rem;
+    }
+
+    .content-area-bold h2 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .card-dynamic {
+        padding: 25px;
+    }
+
+    .call-to-action-bold h2 {
+        font-size: 2rem;
+    }
+
+    .footer-bold .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links-bold {
+        margin-top: 20px;
+    }
+
+    .footer-links-bold a {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content-bold h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content-bold p {
+        font-size: 1rem;
+    }
+
+    .btn-bold-primary, .btn-bold-secondary {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .content-area-bold h2 {
+        font-size: 1.8rem;
+    }
+
+    .card-dynamic h3 {
+        font-size: 1.5rem;
+    }
+    .card-icon {
+        font-size: 2.5rem;
+    }
+}

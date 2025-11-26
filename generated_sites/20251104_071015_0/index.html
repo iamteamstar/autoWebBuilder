@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akıllı Telefonlar - TechFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS for TechFlow */
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">TechFlow</a>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#">Anasayfa</a></li>
+                    <li><a href="#">Modeller</a></li>
+                    <li><a href="#">İncelemeler</a></li>
+                    <li><a href="#">Teknoloji</a></li>
+                    <li><a href="#">İletişim</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Menü">☰</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Geleceğin Akıllı Telefonları Burada</h1>
+            <p>En yeni teknolojiler, çarpıcı tasarımlar ve detaylı karşılaştırmalar.</p>
+            <a href="#" class="btn-primary">Koleksiyonu Keşfet</a>
+        </div>
+    </section>
+
+    <main class="content-area">
+        <div class="container">
+            <section class="section-featured">
+                <h2>Öne Çıkan Modeller</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=TechPhone+X" alt="TechPhone X">
+                        <h3>TechPhone X</h3>
+                        <p>Sınırları zorlayan performans ve kamera.</p>
+                        <span class="price">12.999 TL</span>
+                        <a href="#" class="btn-secondary">Detayları Gör</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=TechPhone+Air" alt="TechPhone Air">
+                        <h3>TechPhone Air</h3>
+                        <p>İnce, hafif ve gün boyu pil ömrü.</p>
+                        <span class="price">9.499 TL</span>
+                        <a href="#" class="btn-secondary">Detayları Gör</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=TechPhone+Mini" alt="TechPhone Mini">
+                        <h3>TechPhone Mini</h3>
+                        <p>Kompakt boyut, büyük özellikler.</p>
+                        <span class="price">7.999 TL</span>
+                        <a href="#" class="btn-secondary">Detayları Gör</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-reviews">
+                <h2>Son İncelemeler</h2>
+                <div class="review-grid">
+                    <article class="review-card">
+                        <h3>TechPhone X: Kullanıcı Deneyimi</h3>
+                        <p>Cihazın performansını, kamera kalitesini ve günlük kullanımdaki artılarını detaylıca inceledik. Kesinlikle sınıfının lideri!</p>
+                        <a href="#" class="read-more">Devamını Oku</a>
+                    </article>
+                    <article class="review-card">
+                        <h3>Karşılaştırma: TechPhone Air vs. Rakip A</h3>
+                        <p>Hafiflik, batarya ömrü ve yazılım akıcılığı konularında iki popüler modeli kıyasladık. Kazanan belli oldu...</p>
+                        <a href="#" class="read-more">Devamını Oku</a>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col">
+                <h3>TechFlow</h3>
+                <p>Geleceğin teknolojisini bugün keşfedin.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Hızlı Bağlantılar</h3>
+                <ul>
+                    <li><a href="#">Anasayfa</a></li>
+                    <li><a href="#">Gizlilik Politikası</a></li>
+                    <li><a href="#">Kullanım Koşulları</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Bizi Takip Edin</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="Twitter">TW</a>
+                    <a href="#" aria-label="Instagram">IG</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 TechFlow. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

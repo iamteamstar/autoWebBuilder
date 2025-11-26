@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelecek Odaklı - Akıllı Telefonlar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar-future-container">
+        <nav class="navbar-future">
+            <div class="logo-future">
+                <a href="#">Future<span>Phone</span></a>
+            </div>
+            <ul class="nav-links-future">
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">İnovasyon</a></li>
+                <li><a href="#">Modeller</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+            <div class="menu-toggle-future">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-future-section">
+            <div class="hero-content-future">
+                <h1>Akıllı Teknolojinin Sınırlarını Zorluyoruz</h1>
+                <p>Yenilikçi tasarımlar ve çığır açan özelliklerle geleceğe adım atın.</p>
+                <a href="#inovasyon" class="btn-future-primary">Daha Fazla Keşfet</a>
+            </div>
+        </section>
+
+        <section class="innovation-showcase container">
+            <div class="showcase-item">
+                <div class="showcase-text">
+                    <h2>Yapay Zeka Destekli Kameralar</h2>
+                    <p>Her anı mükemmel yakalayan akıllı kamera sistemlerimizle fotoğrafçılık deneyiminizi dönüştürün. Gelişmiş AI algoritmaları, ışık koşullarına ve nesneye göre en iyi ayarları otomatik olarak seçer.</p>
+                </div>
+                <div class="showcase-image">
+                    <img src="https://via.placeholder.com/600x400/1e2b47/FFFFFF?text=AI+Kamera" alt="AI Kamera">
+                </div>
+            </div>
+            <div class="showcase-item reverse">
+                <div class="showcase-text">
+                    <h2>Sınır Tanımayan Performans</h2>
+                    <p>En yeni nesil işlemcilerimizle akıcı ve kesintisiz bir kullanım deneyimi yaşayın. Oyun oynarken, çoklu görev yaparken veya yaratıcılığınızı kullanırken asla yavaşlamayın.</p>
+                </div>
+                <div class="showcase-image">
+                    <img src="https://via.placeholder.com/600x400/1e2b47/FFFFFF?text=Performans" alt="Sınırsız Performans">
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-future-section">
+            <div class="container">
+                <h2>Geleceğin Akıllı Telefonları Hakkında Bilgi Alın</h2>
+                <p>En yeni modeller ve özel duyurular için bültenimize kaydolun.</p>
+                <a href="#" class="btn-future-secondary">Bültene Kaydol</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-future-section">
+        <div class="footer-future-content container">
+            <div class="footer-col">
+                <h4>FuturePhone</h4>
+                <p>İnovasyonun peşindeyiz.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hizmetler</h4>
+                <ul>
+                    <li><a href="#">Ürünler</a></li>
+                    <li><a href="#">Destek</a></li>
+                    <li><a href="#">Garanti</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Sosyal Medya</h4>
+                <div class="social-icons-future">
+                    <a href="#"><img src="https://via.placeholder.com/24/ffffff/000000?text=F" alt="Facebook"></a>
+                    <a href="#"><img src="https://via.placeholder.com/24/ffffff/000000?text=T" alt="Twitter"></a>
+                    <a href="#"><img src="https://via.placeholder.com/24/ffffff/000000?text=I" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-future">
+            <p>&copy; 2023 FuturePhone. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle-future').addEventListener('click', () => {
+            document.querySelector('.nav-links-future').classList.toggle('active');
+            document.querySelector('.menu-toggle-future').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Akıllı Telefonlar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>/* CSS buraya gelecek */</style>
+</head>
+<body>
+    <nav class="navbar-minimal">
+        <div class="container">
+            <div class="logo"><a href="#">MINIMA</a></div>
+            <ul class="nav-links-minimal" id="navLinksMinimal">
+                <li><a href="#hero-minimal">Ana Sayfa</a></li>
+                <li><a href="#philosophy">Felsefemiz</a></li>
+                <li><a href="#devices">Cihazlar</a></li>
+                <li><a href="#contact-minimal">İletişim</a></li>
+            </ul>
+            <div class="hamburger-minimal" onclick="toggleNavMinimal()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-minimal" id="hero-minimal">
+        <div class="container">
+            <h1>Akıllı Telefon Deneyiminizi Yeniden Tanımlayın.</h1>
+            <p>Zarafet, performans ve kusursuz işlevselliğin buluştuğu nokta.</p>
+            <a href="#devices" class="btn-minimal">Cihazlarımızı Keşfedin</a>
+        </div>
+    </header>
+
+    <section class="philosophy" id="philosophy">
+        <div class="container">
+            <h2>Tasarım Felsefemiz</h2>
+            <div class="philosophy-content">
+                <p>Her bir cihazımız, sadelik ve işlevsellik arasında mükemmel dengeyi bulmak üzere titizlikle tasarlanmıştır. Gereksiz olanı atarak, gerçekte önemli olanı vurguluyoruz: kullanıcı deneyimi.</p>
+                <p>Minimalist yaklaşımımız, sizi karmaşadan uzaklaştırarak, teknolojinin sunduğu en iyi özelliklere odaklanmanızı sağlar. Estetik ve ergonomiyi bir araya getirerek, sadece bir telefon değil, yaşam tarzınızın bir uzantısı olan cihazlar yaratıyoruz.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="device-showcase" id="devices">
+        <div class="container">
+            <h2>Cihazlarımız</h2>
+            <div class="device-grid">
+                <div class="device-item">
+                    <img src="https://via.placeholder.com/300x450/eeeeee/333333?text=Minima+Classic" alt="Minima Classic">
+                    <h3>Minima Classic</h3>
+                    <p>Zamansız tasarım, güvenilir performans. Temel özelliklerde mükemmellik arayanlar için.</p>
+                    <a href="#" class="btn-minimal-ghost">Daha Fazla</a>
+                </div>
+                <div class="device-item">
+                    <img src="https://via.placeholder.com/300x450/dddddd/333333?text=Minima+Pro" alt="Minima Pro">
+                    <h3>Minima Pro</h3>
+                    <p>En üst düzey performans ve gelişmiş kamera özellikleri. Profesyonellerin tercihi.</p>
+                    <a href="#" class="btn-minimal-ghost">Daha Fazla</a>
+                </div>
+                <div class="device-item">
+                    <img src="https://via.placeholder.com/300x450/cccccc/333333?text=Minima+Lite" alt="Minima Lite">
+                    <h3>Minima Lite</h3>
+                    <p>Hafif, zarif ve uygun fiyatlı. Günlük kullanım için ideal.</p>
+                    <a href="#" class="btn-minimal-ghost">Daha Fazla</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-minimal">
+        <div class="container">
+            <h2>Sadelikle Gücü Birleştirin</h2>
+            <p>Bugün bir Minima cihazı seçerek, teknolojiyi daha bilinçli ve keyifli bir şekilde deneyimleyin.</p>
+            <a href="#devices" class="btn-minimal">Hemen İncele</a>
+        </div>
+    </section>
+
+    <footer class="footer-minimal" id="contact-minimal">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h3>MINIMA</h3>
+                    <p>Minimalist teknolojinin geleceği.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Keşfet</h3>
+                    <ul>
+                        <li><a href="#hero-minimal">Ana Sayfa</a></li>
+                        <li><a href="#philosophy">Felsefemiz</a></li>
+                        <li><a href="#devices">Cihazlar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Bize Ulaşın</h3>
+                    <p>info@minima.com</p>
+                    <p>+90 555 123 4567</p>
+                    <div class="socials-minimal">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-minimal">
+                &copy; 2023 MINIMA | Tüm Hakları Saklıdır.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNavMinimal() {
+            const navLinks = document.getElementById('navLinksMinimal');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

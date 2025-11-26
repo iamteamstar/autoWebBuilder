@@ -1,0 +1,476 @@
+/* Basic Reset & Body - Rustic Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    color: #4A4A4A;
+    background-color: #F8F5F0; /* Creamy background */
+}
+
+.container-rustic {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Navbar Rustic */
+.navbar-rustic {
+    background-color: #7A5230; /* Darker brown */
+    padding: 18px 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-rustic .container-rustic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-rustic .logo-rustic {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #F8F5F0; /* Cream */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.nav-links-rustic {
+    display: flex;
+}
+
+.nav-links-rustic li {
+    margin-left: 35px;
+}
+
+.nav-links-rustic a {
+    color: #F8F5F0;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links-rustic a:hover {
+    color: #D2B48C; /* Light brown accent */
+}
+
+.nav-links-rustic a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #D2B48C;
+    transition: width 0.3s ease-out;
+}
+
+.nav-links-rustic a:hover::after {
+    width: 100%;
+}
+
+.nav-links-rustic .cart-icon-rustic {
+    display: flex;
+    align-items: center;
+}
+.nav-links-rustic .cart-icon-rustic svg {
+    margin-right: 5px;
+}
+
+.menu-toggle-rustic {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle-rustic span {
+    height: 3px;
+    width: 30px;
+    background-color: #F8F5F0;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hero Section Rustic */
+.hero-section-rustic {
+    background: linear-gradient(rgba(92,64,51,0.6), rgba(92,64,51,0.6)), url('https://via.placeholder.com/1600x700/8B4513/F5DEB3?text=Bereket+Sepeti') center/cover no-repeat;
+    color: #F8F5F0;
+    text-align: center;
+    padding: 150px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    position: relative;
+}
+
+.hero-section-rustic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-section-rustic > * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title-rustic {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.2rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle-rustic {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-rustic {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primary-btn-rustic {
+    background-color: #D2B48C; /* Light brown accent */
+    color: #5C4033; /* Dark brown text */
+    border: 2px solid #D2B48C;
+}
+
+.primary-btn-rustic:hover {
+    background-color: #B08D6D;
+    border-color: #B08D6D;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.secondary-btn-rustic {
+    background-color: #5C4033; /* Dark brown */
+    color: #F8F5F0; /* Cream text */
+    border: 2px solid #5C4033;
+}
+
+.secondary-btn-rustic:hover {
+    background-color: #7A5230;
+    border-color: #7A5230;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Content Area Rustic */
+.content-area-rustic {
+    padding: 80px 0;
+}
+
+.content-area-rustic h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 60px;
+    color: #5C4033;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.content-area-rustic h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #D2B48C;
+    border-radius: 2px;
+}
+
+/* New Arrivals */
+.product-cards-rustic {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.product-card-rustic {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #E0D9C6;
+}
+
+.product-card-rustic:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card-rustic img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #E0D9C6;
+}
+
+.product-card-rustic h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    color: #7A5230;
+}
+
+.product-card-rustic p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.product-card-rustic .price-rustic {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #5C4033;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Story Section */
+.story-section-rustic {
+    background-color: #E6E0D5; /* Lighter cream/beige */
+    padding: 70px 0;
+    border-radius: 12px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.story-section-rustic h2 {
+    margin-bottom: 50px;
+    color: #5C4033;
+}
+
+.story-content-rustic {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.story-content-rustic .story-image-rustic {
+    flex: 1;
+    max-width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    height: 350px;
+}
+
+.story-content-rustic .story-text-rustic {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.story-content-rustic .story-text-rustic p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.story-content-rustic .story-text-rustic .btn-rustic {
+    margin-top: 20px;
+}
+
+/* Footer Rustic */
+.footer-rustic {
+    background-color: #5C4033; /* Dark brown */
+    color: #F8F5F0;
+    padding: 60px 0 25px;
+    font-size: 1rem;
+}
+
+.footer-rustic .footer-columns-rustic {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    margin-bottom: 45px;
+}
+
+.footer-col-rustic h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #D2B48C; /* Light brown accent */
+}
+
+.footer-col-rustic p {
+    margin-bottom: 12px;
+    color: #E0D9C6;
+}
+
+.footer-col-rustic ul {
+    list-style: none;
+}
+
+.footer-col-rustic ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col-rustic ul a {
+    color: #E0D9C6;
+    transition: color 0.3s ease;
+}
+
+.footer-col-rustic ul a:hover {
+    color: #F8F5F0;
+}
+
+.social-media-rustic {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media-rustic a {
+    color: #E0D9C6;
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media-rustic a:hover {
+    color: #D2B48C;
+    transform: translateY(-3px);
+}
+
+.copyright-rustic {
+    text-align: center;
+    border-top: 1px solid #7A5230;
+    padding-top: 25px;
+    margin-top: 40px;
+    color: #E0D9C6;
+}
+
+/* Responsive Styles - Rustic Theme */
+@media (max-width: 992px) {
+    .hero-title-rustic {
+        font-size: 3.5rem;
+    }
+    .story-content-rustic {
+        flex-direction: column;
+    }
+    .story-content-rustic .story-image-rustic {
+        max-width: 80%;
+        height: auto;
+    }
+    .story-content-rustic .story-text-rustic {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-rustic .container-rustic {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navbar-rustic .logo-rustic {
+        margin-bottom: 20px;
+    }
+    .nav-links-rustic {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        display: none;
+        margin-top: 20px;
+    }
+
+    .nav-links-rustic.active {
+        display: flex;
+    }
+
+    .nav-links-rustic li {
+        margin: 12px 0;
+    }
+
+    .menu-toggle-rustic {
+        display: flex;
+        position: absolute;
+        right: 25px;
+        top: 28px;
+    }
+
+    .menu-toggle-rustic.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-7px, 7px);
+    }
+    .menu-toggle-rustic.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle-rustic.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-7px, -7px);
+    }
+
+    .hero-section-rustic {
+        padding: 100px 20px;
+        min-height: 500px;
+    }
+    .hero-title-rustic {
+        font-size: 2.8rem;
+    }
+    .hero-subtitle-rustic {
+        font-size: 1.2rem;
+    }
+    .content-area-rustic h2 {
+        font-size: 2.5rem;
+    }
+    .product-cards-rustic, .footer-columns-rustic {
+        grid-template-columns: 1fr;
+    }
+    .product-card-rustic, .footer-col-rustic {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .story-content-rustic .story-image-rustic {
+        max-width: 90%;
+    }
+}

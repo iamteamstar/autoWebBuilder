@@ -1,0 +1,28 @@
+{
+  "siteId": "20251107_033312_0",
+  "title": "Taptaze Ürünler Kapınızda!",
+  "themeColor": "#000000",
+  "logoSrc": null,
+  "sections": [
+    {
+      "title": "",
+      "desc": "Çiftlikten sofranıza, en kaliteli ve doğal market ürünleri.",
+      "img": null,
+      "imgPos": "left"
+    },
+    {
+      "title": "Öne Çıkan Ürünlerimiz",
+      "desc": "Günlük toplanmış organik sebzeler.",
+      "img": "https://via.placeholder.com/300x200/8BC34A/FFFFFF?text=Sebzeler",
+      "imgPos": "left"
+    },
+    {
+      "title": "Neden Bizi Seçmelisiniz?",
+      "desc": "Market Fresh olarak, ürünlerimizin kalitesine ve tazeliğine büyük önem veriyoruz. Doğal yollarla yetiştirilmiş, özenle seçilmiş ürünleri kapınıza kadar getiriyoruz. Sağlıklı ve lezzetli yaşam için güvenilir adresiniz.",
+      "img": "https://via.placeholder.com/400x300/4CAF50/FFFFFF?text=Biz+Kimiz",
+      "imgPos": "left"
+    }
+  ],
+  "editedAt": "2025-11-07 11:27:02",
+  "type": "edited"
+}

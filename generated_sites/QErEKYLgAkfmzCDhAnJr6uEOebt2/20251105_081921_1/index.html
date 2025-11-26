@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sdsd Sitesi - Koyu Cesur</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar dark-theme-navbar">
+        <div class="container">
+            <div class="logo">Sdsd</div>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="#hero">Ana Sayfa</a></li>
+                    <li><a href="#about">Hakkımızda</a></li>
+                    <li><a href="#features">Özellikler</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" aria-label="Menü">☰</div>
+        </div>
+    </header>
+
+    <section id="hero" class="hero dark-theme-hero">
+        <div class="container">
+            <h1>Geleceği Yeniden Tanımlayan Teknoloji</h1>
+            <p>Sdsd ile sınırları aşın. Cesur adımlar atın, fark yaratın.</p>
+            <a href="#features" class="button dark-theme-button">Hizmetlerimizi Keşfedin</a>
+        </div>
+    </section>
+
+    <section id="about" class="content-section dark-theme-section">
+        <div class="container">
+            <h2>Biz Kimiz?</h2>
+            <p>Sdsd, dijital dönüşümün ön saflarında yer alan, yenilikçi bir teknoloji şirketidir. Geliştirdiğimiz çözümlerle iş dünyasına ve bireylere değer katmayı hedefliyoruz.</p>
+            <p>Tutkulu ekibimiz, en son teknolojileri kullanarak karmaşık sorunlara basit ve etkili çözümler sunar. Her projemizde mükemmelliği hedefleriz.</p>
+        </div>
+    </section>
+
+    <section id="features" class="content-section dark-theme-section light-gradient-bg">
+        <div class="container">
+            <h2>Başlıca Özelliklerimiz</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Yüksek Performans</h3>
+                    <p>Uygulamalarımızda maksimum hız ve verimlilik garanti ediyoruz.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Güvenli Çözümler</h3>
+                    <p>Veri güvenliğiniz bizim için önceliktir. En yeni güvenlik protokolleri.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Kullanıcı Dostu Tasarım</h3>
+                    <p>Sezgisel arayüzler ile kolay ve keyifli bir deneyim sunuyoruz.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>7/24 Destek</h3>
+                    <p>Her zaman yanınızdayız. Sorunlarınıza hızlı çözümler sağlıyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content-section dark-theme-section">
+        <div class="container">
+            <h2>Bize Ulaşın</h2>
+            <p>Projeleriniz, iş birlikleriniz veya genel sorularınız için bizimle iletişime geçmekten çekinmeyin.</p>
+            <form class="contact-form dark-theme-form">
+                <input type="text" placeholder="Adınız Soyadınız">
+                <input type="email" placeholder="E-posta Adresiniz">
+                <textarea placeholder="Mesajınız"></textarea>
+                <button type="submit" class="button dark-theme-button">Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer dark-theme-footer">
+        <div class="container">
+            <p>&copy; 2023 Sdsd. Tüm hakları saklıdır. Cesurca İleri!</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

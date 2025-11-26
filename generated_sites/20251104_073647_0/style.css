@@ -1,0 +1,281 @@
+/* Minimalist ve Fonksiyonel Tema CSS */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --text-color: #333;
+    --bg-color: #f8f9fa;
+    --light-gray: #e9ecef;
+    --white: #ffffff;
+    --border-radius: 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+.minimalist-header {
+    background-color: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.minimalist-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.minimalist-header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.minimalist-nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+.minimalist-nav a {
+    color: var(--text-color);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.minimalist-nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.minimalist-hero {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.minimalist-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.minimalist-hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Products Section */
+.minimalist-products {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.minimalist-products h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--text-color);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    height: 200px; /* Consistent image height */
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* About Section */
+.minimalist-about {
+    background-color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.minimalist-about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.minimalist-about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+/* Footer */
+.minimalist-footer {
+    background-color: var(--text-color);
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.minimalist-footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.minimalist-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: var(--white);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%; /* Make them circular */
+    background-color: var(--primary-color); /* Background for placeholder icons */
+    padding: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .minimalist-header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .minimalist-nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .minimalist-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .minimalist-hero p {
+        font-size: 1rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .minimalist-products h2, .minimalist-about h2 {
+        font-size: 2rem;
+    }
+
+    .minimalist-footer .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

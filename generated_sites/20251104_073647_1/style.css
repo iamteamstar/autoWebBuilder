@@ -1,0 +1,424 @@
+/* Modern Elegans Tema CSS */
+:root {
+    --dark-bg: #1a1a1a;
+    --light-text: #f0f0f0;
+    --accent-color: #d4af37; /* Gold */
+    --secondary-accent: #555;
+    --border-radius-lg: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--light-text);
+    background-color: var(--dark-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e0c26b;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Header */
+.elegant-header {
+    background-color: rgba(26, 26, 26, 0.95); /* Slightly transparent dark */
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.elegant-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-elegant {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--light-text);
+}
+
+.elegant-nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.elegant-nav a {
+    color: var(--light-text);
+    font-weight: 400;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.elegant-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.elegant-nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-elegant {
+    position: relative;
+    height: 80vh;
+    background: url('https://via.placeholder.com/1600x900/1a1a1a/f0f0f0?text=Luxury+White+Goods') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-text);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-elegant h1 {
+    font-size: 4.5rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-elegant p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-elegant {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    padding: 15px 35px;
+    border-radius: var(--border-radius-lg);
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-elegant:hover {
+    background-color: #e0c26b;
+    transform: translateY(-3px);
+}
+
+/* Featured Products */
+.elegant-featured-products {
+    padding: 100px 0;
+    background-color: #222;
+    text-align: center;
+}
+
+.elegant-featured-products h2 {
+    font-size: 3.5rem;
+    margin-bottom: 60px;
+    color: var(--accent-color);
+}
+
+.product-carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    justify-content: center;
+}
+
+.elegant-product-card {
+    background-color: #333;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.elegant-product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.elegant-product-card img {
+    max-width: 100%;
+    border-radius: var(--border-radius-lg);
+    margin-bottom: 25px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.elegant-product-card h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--light-text);
+}
+
+.elegant-product-card p {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 15px;
+}
+
+.elegant-product-card .price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.btn-elegant-small {
+    display: inline-block;
+    background-color: var(--secondary-accent);
+    color: var(--light-text);
+    padding: 10px 20px;
+    border-radius: var(--border-radius-lg);
+    font-weight: 400;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-elegant-small:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+}
+
+/* Collections Section */
+.elegant-collections {
+    padding: 100px 0;
+    text-align: center;
+    background-color: var(--dark-bg);
+}
+
+.elegant-collections h2 {
+    font-size: 3.5rem;
+    margin-bottom: 60px;
+    color: var(--light-text);
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+}
+
+.collection-item {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.collection-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.collection-item:hover img {
+    transform: scale(1.05);
+}
+
+.collection-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.collection-item:hover .collection-overlay {
+    opacity: 1;
+}
+
+.collection-overlay h3 {
+    font-size: 2.5rem;
+    color: var(--light-text);
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.elegant-footer {
+    background-color: #111;
+    color: #ccc;
+    padding: 60px 0 30px;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.footer-col p, .footer-col ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: #ccc;
+}
+
+.footer-col a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--secondary-accent);
+    padding-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-elegant h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-elegant p {
+        font-size: 1.2rem;
+    }
+
+    .elegant-featured-products h2, .elegant-collections h2 {
+        font-size: 3rem;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-item img {
+        height: 300px;
+    }
+    .collection-overlay h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .elegant-header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .elegant-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-elegant {
+        height: 70vh;
+    }
+
+    .hero-elegant h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-elegant p {
+        font-size: 1rem;
+    }
+
+    .elegant-featured-products h2, .elegant-collections h2 {
+        font-size: 2.5rem;
+    }
+
+    .product-carousel {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-elegant h1 {
+        font-size: 2rem;
+    }
+
+    .btn-elegant {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .elegant-featured-products h2, .elegant-collections h2 {
+        font-size: 2rem;
+    }
+
+    .elegant-product-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .elegant-product-card .price {
+        font-size: 1.3rem;
+    }
+    .collection-item img {
+        height: 250px;
+    }
+    .collection-overlay h3 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akıllı Telefon Rehberi - Minimalist Teknoloji</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Genel Ayarlar */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --background-light: #f8f9fa;
+            --text-dark: #343a40;
+            --text-light: #ffffff;
+            --border-color: #dee2e6;
+            --font-family-sans: 'Poppins', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family-sans);
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navbar */
+        header {
+            background: var(--text-light);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        nav .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        nav .nav-links li {
+            margin-left: 25px;
+        }
+
+        nav .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #007bff80, #5a626880), url('https://source.unsplash.com/1600x900/?smartphone,tech') no-repeat center center/cover;
+            color: var(--text-light);
+            text-align: center;
+            padding: 100px 20px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin: 20px auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 60px 0;
+            background-color: var(--text-light);
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .content-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--background-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .card p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--background-light);
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Tasarım */
+        @media (max-width: 768px) {
+            nav .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 70px; /* Adjust based on header height */
+                left: 0;
+                background: var(--text-light);
+                border-top: 1px solid var(--border-color);
+                padding: 10px 0;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                z-index: 1000;
+            }
+
+            nav .nav-links.active {
+                display: flex;
+            }
+
+            nav .nav-links li {
+                margin: 10px 20px;
+                text-align: center;
+            }
+
+            nav .nav-links a {
+                padding: 10px 0;
+                display: block;
+                width: 100%;
+                color: var(--text-dark);
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .content-section h2 {
+                font-size: 2rem;
+            }
+
+            .grid-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Akıllı Telefon Rehberi</a>
+            <ul class="nav-links">
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Markalar</a></li>
+                <li><a href="#">İncelemeler</a></li>
+                <li><a href="#">Karşılaştırmalar</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero-minimalist" class="hero">
+            <div class="container">
+                <h1>Geleceğin Akıllı Telefonları Parmaklarınızın Ucunda</h1>
+                <p>En son modelleri keşfedin, detaylı incelemeleri okuyun ve size en uygun telefonu bulun.</p>
+                <a href="#" class="btn-primary">Koleksiyonu İncele</a>
+            </div>
+        </section>
+
+        <section id="features-minimalist" class="content-section">
+            <div class="container">
+                <h2>Öne Çıkan Modeller</h2>
+                <div class="grid-cards">
+                    <article class="card">
+                        <h3>iPhone 15 Pro Max</h3>
+                        <p>Yenilikçi kamera sistemi, A17 Bionic çip ve titanyum tasarım.</p>
+                        <a href="#" class="read-more">Detayları Gör</a>
+                    </article>
+                    <article class="card">
+                        <h3>Samsung Galaxy S24 Ultra</h3>
+                        <p>Gelişmiş AI özellikleri, güçlü işlemci ve dinamik AMOLED ekran.</p>
+                        <a href="#" class="read-more">Detayları Gör</a>
+                    </article>
+                    <article class="card">
+                        <h3>Google Pixel 8 Pro</h3>
+                        <p>Saf Android deneyimi, gelişmiş yapay zeka fotoğrafçılığı.</p>
+                        <a href="#" class="read-more">Detayları Gör</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Akıllı Telefon Rehberi. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

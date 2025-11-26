@@ -1,0 +1,395 @@
+/* General Styles - Tech Theme */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.8;
+    color: #eee;
+    background-color: #1a1a1a; /* Dark background */
+}
+
+.container-tech {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn-tech {
+    display: inline-block;
+    background: linear-gradient(90deg, #00bcd4 0%, #007bff 100%); /* Cyan to Blue Gradient */
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 188, 212, 0.4);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.btn-tech:hover {
+    background: linear-gradient(90deg, #007bff 0%, #00bcd4 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 188, 212, 0.6);
+}
+
+.btn-tech-small {
+    padding: 10px 20px;
+    font-size: 0.9em;
+}
+
+/* Navbar - Tech Theme */
+.navbar-tech {
+    background-color: rgba(0,0,0,0.8);
+    padding: 20px 0;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Modern blur effect */
+}
+
+.navbar-tech .container-tech {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-tech .logo-tech {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #00bcd4; /* Cyan accent */
+    letter-spacing: 2px;
+}
+
+.nav-links-tech {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links-tech li {
+    margin-left: 40px;
+}
+
+.nav-links-tech a {
+    font-weight: 600;
+    color: #ccc;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+    letter-spacing: 0.8px;
+}
+
+.nav-links-tech a:hover, .nav-links-tech a.active {
+    color: #00bcd4;
+    border-bottom: 2px solid #00bcd4;
+}
+
+.hamburger-tech {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-tech span {
+    height: 3px;
+    width: 28px;
+    background-color: #00bcd4;
+    margin-bottom: 6px;
+    border-radius: 2px;
+}
+
+/* Hero Section - Tech Theme */
+.hero-section-tech {
+    position: relative;
+    background: url('https://via.placeholder.com/1800x900?text=High+Tech+Heater') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 180px 0;
+    overflow: hidden;
+}
+
+.hero-overlay-tech {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+}
+
+.hero-content-tech {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section-tech h1 {
+    font-size: 4em;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    text-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+}
+
+.hero-section-tech p {
+    font-size: 1.5em;
+    margin-bottom: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+    color: #ddd;
+}
+
+/* Content Area - Tech Features */
+.tech-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.tech-feature-item {
+    background-color: #2a2a2a;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-bottom: 4px solid #00bcd4;
+}
+
+.tech-feature-item:hover {
+    transform: translateY(-10px);
+    background-color: #333;
+}
+
+.tech-feature-item i {
+    font-size: 4em;
+    color: #00bcd4;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.tech-feature-item h3 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.tech-feature-item p {
+    color: #bbb;
+    font-size: 1.05em;
+}
+
+/* Content Area - Product Overview */
+.product-overview-tech {
+    padding-bottom: 100px;
+}
+
+.product-overview-tech h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 70px;
+    color: #fff;
+}
+
+.product-line-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 50px;
+}
+
+.product-line-card {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 188, 212, 0.2);
+}
+
+.product-line-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+.product-line-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #333;
+}
+
+.product-line-card .card-content {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-line-card h3 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #00bcd4;
+}
+
+.product-line-card p {
+    color: #bbb;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+/* Footer - Tech Theme */
+.footer-tech {
+    background-color: #000;
+    color: #aaa;
+    padding: 60px 0 20px;
+    border-top: 1px solid #333;
+}
+
+.footer-content-tech {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #222;
+}
+
+.footer-col-tech h3 {
+    color: #fff;
+    font-size: 1.4em;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.footer-col-tech p, .footer-col-tech ul li a {
+    color: #888;
+    font-size: 0.95em;
+}
+
+.footer-col-tech ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col-tech ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col-tech ul li a:hover {
+    color: #00bcd4;
+}
+
+.social-icons-tech a {
+    color: #888;
+    font-size: 1.6em;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-tech a:hover {
+    color: #00bcd4;
+}
+
+.bottom-bar-tech {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 0.85em;
+    color: #666;
+}
+
+.bottom-bar-tech a {
+    color: #666;
+    margin-left: 15px;
+}
+
+.bottom-bar-tech a:hover {
+    color: #00bcd4;
+}
+
+/* Responsive - Tech Theme */
+@media (max-width: 768px) {
+    .navbar-tech .nav-links-tech {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0,0,0,0.9);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        border-top: 1px solid #333;
+    }
+
+    .navbar-tech .nav-links-tech.active {
+        display: flex;
+    }
+
+    .nav-links-tech li {
+        margin: 0;
+        text-align: center;
+        padding: 18px 0;
+        border-bottom: 1px solid #222;
+    }
+
+    .nav-links-tech li:last-child {
+        border-bottom: none;
+    }
+
+    .hamburger-tech {
+        display: flex;
+    }
+
+    .hero-section-tech h1 {
+        font-size: 2.8em;
+        letter-spacing: 2px;
+    }
+
+    .hero-section-tech p {
+        font-size: 1.1em;
+    }
+
+    .tech-features-grid, .product-line-grid, .footer-content-tech {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-feature-item, .product-line-card {
+        margin: 0 10px;
+    }
+
+    .product-line-card img {
+        height: 200px;
+    }
+
+    .bottom-bar-tech {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bottom-bar-tech p {
+        margin-bottom: 10px;
+    }
+
+    .bottom-bar-tech a {
+        margin: 0 5px;
+    }
+}

@@ -1,0 +1,412 @@
+/* Sıcak Yuva - CSS */
+
+:root {
+    --primary-color-cozy: #e7a46f; /* Warm orange */
+    --secondary-color-cozy: #fdfaf6; /* Light cream */
+    --text-color-cozy: #5d4037; /* Dark brown */
+    --light-text-color-cozy: #a87864; /* Muted brown */
+    --background-color-cozy: #fdf8f5; /* Off-white */
+    --border-color-cozy: #edd8c7; /* Lighter warm tone */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7;
+    color: var(--text-color-cozy);
+    background-color: var(--background-color-cozy);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    color: var(--text-color-cozy);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar-cozy {
+    background-color: var(--secondary-color-cozy);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color-cozy);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-cozy .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-cozy {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color-cozy);
+    text-decoration: none;
+}
+
+.nav-list-cozy {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list-cozy li {
+    margin-left: 30px;
+}
+
+.nav-list-cozy a {
+    color: var(--text-color-cozy);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-list-cozy a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color-cozy);
+    transition: width 0.3s ease;
+}
+
+.nav-list-cozy a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle-cozy {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle-cozy span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color-cozy);
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero-cozy {
+    background-color: var(--secondary-color-cozy);
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-cozy .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hero-text-cozy {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 40px;
+}
+
+.hero-text-cozy h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: var(--text-color-cozy);
+}
+
+.hero-text-cozy p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--light-text-color-cozy);
+}
+
+.hero-img-cozy {
+    flex: 1;
+    min-width: 300px;
+    text-align: right;
+}
+
+.hero-img-cozy img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.btn-cozy-primary, .btn-cozy-secondary {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 25px; /* Softer rounded corners */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-cozy-primary {
+    background-color: var(--primary-color-cozy);
+    color: var(--white-color-cozy, #ffffff);
+    border: 2px solid var(--primary-color-cozy);
+}
+
+.btn-cozy-primary:hover {
+    background-color: var(--text-color-cozy);
+    border-color: var(--text-color-cozy);
+}
+
+.btn-cozy-secondary {
+    background-color: transparent;
+    color: var(--primary-color-cozy);
+    border: 2px solid var(--primary-color-cozy);
+}
+
+.btn-cozy-secondary:hover {
+    background-color: var(--primary-color-cozy);
+    color: var(--white-color-cozy, #ffffff);
+}
+
+/* Content Area */
+.content-area-cozy {
+    padding: 80px 0;
+}
+
+.content-area-cozy h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--text-color-cozy);
+}
+
+/* Testimonials */
+.testimonials-cozy {
+    margin-bottom: 80px;
+}
+
+.testimonial-cards-cozy {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card-cozy {
+    background-color: var(--secondary-color-cozy);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border: 1px solid var(--border-color-cozy);
+}
+
+.testimonial-card-cozy p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: var(--light-text-color-cozy);
+    font-size: 1.05rem;
+}
+
+.testimonial-card-cozy span {
+    font-weight: 600;
+    color: var(--text-color-cozy);
+    font-size: 0.95rem;
+}
+
+/* Our Story */
+.our-story-cozy {
+    text-align: center;
+    padding: 60px 0;
+    background-color: var(--secondary-color-cozy);
+    border-radius: 10px;
+    border: 1px solid var(--border-color-cozy);
+}
+
+.our-story-cozy p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    color: var(--light-text-color-cozy);
+}
+
+/* Footer */
+.footer-cozy {
+    background-color: var(--text-color-cozy);
+    color: var(--secondary-color-cozy);
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-cozy .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-cozy p {
+    margin-bottom: 10px;
+}
+
+.footer-cozy p:last-of-type {
+    margin-bottom: 20px;
+}
+
+.footer-cozy a {
+    color: var(--primary-color-cozy);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-cozy a:hover {
+    color: var(--secondary-color-cozy);
+}
+
+.social-links-cozy a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-links-cozy img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.social-links-cozy img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-cozy .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text-cozy {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .hero-img-cozy {
+        text-align: center;
+    }
+
+    .hero-img-cozy img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-cozy .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo-cozy {
+        margin-bottom: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list-cozy {
+        flex-direction: column;
+        display: none; /* Hidden by default */
+        width: 100%;
+        background-color: var(--secondary-color-cozy);
+        position: absolute;
+        left: 0;
+        top: 60px; /* Adjust based on navbar height */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-list-cozy.active {
+        display: flex;
+    }
+
+    .nav-list-cozy li {
+        margin: 0;
+        border-bottom: 1px solid var(--border-color-cozy);
+    }
+
+    .nav-list-cozy a {
+        display: block;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .menu-toggle-cozy {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .hero-cozy {
+        padding: 60px 20px;
+    }
+
+    .hero-text-cozy h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text-cozy p {
+        font-size: 1rem;
+    }
+
+    .content-area-cozy h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .our-story-cozy {
+        padding: 40px 20px;
+    }
+
+    .testimonial-card-cozy {
+        padding: 25px;
+    }
+
+    .footer-cozy .social-links-cozy {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text-cozy h1 {
+        font-size: 2rem;
+    }
+
+    .btn-cozy-primary, .btn-cozy-secondary {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    .content-area-cozy h2 {
+        font-size: 1.8rem;
+    }
+}

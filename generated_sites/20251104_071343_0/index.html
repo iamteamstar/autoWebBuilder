@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknoloji Keşfi - Akıllı Telefonlar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar-container">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">SmartPhone<span>Hub</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Cihazlar</a></li>
+                <li><a href="#">İncelemeler</a></li>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Akıllı Telefonların Geleceğini Keşfedin</h1>
+                <p>En yeni modeller, detaylı incelemeler ve teknoloji haberleri tek bir yerde.</p>
+                <a href="#cihazlar" class="btn-primary">Cihazları İncele</a>
+            </div>
+        </section>
+
+        <section class="content-area container">
+            <h2>En Yeni Akıllı Telefonlar</h2>
+            <div class="device-grid">
+                <div class="device-card">
+                    <img src="https://via.placeholder.com/300x200/5E86E4/FFFFFF?text=Telefon+A" alt="Telefon A">
+                    <h3>Telefon Modeli A</h3>
+                    <p>Yüksek performans ve çarpıcı kamera özellikleriyle.</p>
+                    <a href="#" class="btn-secondary">Detaylar</a>
+                </div>
+                <div class="device-card">
+                    <img src="https://via.placeholder.com/300x200/5E86E4/FFFFFF?text=Telefon+B" alt="Telefon B">
+                    <h3>Telefon Modeli B</h3>
+                    <p>Minimalist tasarım ve uzun pil ömrü sunar.</p>
+                    <a href="#" class="btn-secondary">Detaylar</a>
+                </div>
+                <div class="device-card">
+                    <img src="https://via.placeholder.com/300x200/5E86E4/FFFFFF?text=Telefon+C" alt="Telefon C">
+                    <h3>Telefon Modeli C</h3>
+                    <p>Gelişmiş güvenlik ve yenilikçi arayüz.</p>
+                    <a href="#" class="btn-secondary">Detaylar</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section container">
+            <h2>Hakkımızda</h2>
+            <p>SmartPhoneHub olarak, akıllı telefon dünyasındaki en son gelişmeleri ve yenilikleri sizlere sunmayı hedefliyoruz. Kapsamlı rehberlerimiz, dürüst incelemelerimiz ve güncel haberlerimizle, doğru cihazı seçmenize yardımcı olmayı amaçlıyoruz. Teknolojiye olan tutkumuzla, en doğru bilgileri tarafsız bir şekilde sunuyoruz.</p>
+        </section>
+    </main>
+
+    <footer class="footer-section">
+        <div class="footer-content container">
+            <div class="footer-links">
+                <h4>Hızlı Bağlantılar</h4>
+                <ul>
+                    <li><a href="#">Gizlilik Politikası</a></li>
+                    <li><a href="#">Kullanım Koşulları</a></li>
+                    <li><a href="#">Site Haritası</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h4>Bizi Takip Edin</h4>
+                <a href="#" class="social-icon">FB</a>
+                <a href="#" class="social-icon">TW</a>
+                <a href="#" class="social-icon">IG</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 SmartPhoneHub. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+            document.querySelector('.menu-toggle').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

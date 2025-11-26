@@ -1,0 +1,413 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    background-color: #f8f8f8;
+    color: #444;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+/* Navbar */
+.navbar-prestige {
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+}
+
+.navbar-prestige .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-prestige .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.navbar-prestige nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-prestige nav ul li {
+    margin-left: 35px;
+}
+
+.navbar-prestige nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 400;
+    font-size: 16px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+}
+
+.navbar-prestige nav ul li a:hover {
+    color: #a08050;
+    border-bottom: 2px solid #a08050;
+}
+
+/* Hero Section */
+.hero-prestige {
+    background-image: url('https://via.placeholder.com/1600x600/D0D0D0/555?text=Lüks+Mutfak'); /* Placeholder for a high-res, elegant image */
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-prestige .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-prestige h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+.hero-prestige p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.cta-button-prestige {
+    background-color: #a08050;
+    color: white;
+    padding: 18px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.cta-button-prestige:hover {
+    background-color: #8a6a3b;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Content Area */
+.content-area-prestige {
+    padding: 80px 0;
+}
+
+.about-section {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 80px auto;
+}
+
+.about-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    color: #333;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.about-section h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #a08050;
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.btn-read-more {
+    display: inline-block;
+    background-color: transparent;
+    color: #a08050;
+    border: 1px solid #a08050;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-read-more:hover {
+    background-color: #a08050;
+    color: white;
+}
+
+.featured-products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 80px;
+}
+
+.product-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.product-item img {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50%;
+    height: auto;
+    display: block;
+}
+
+.product-item .item-details {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50%;
+    padding: 30px 40px;
+    text-align: left;
+}
+
+.product-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.product-item p {
+    font-size: 17px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.btn-view-product {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-view-product:hover {
+    background-color: #a08050;
+}
+
+/* Footer */
+.footer-prestige {
+    background-color: #222;
+    color: #f8f8f8;
+    padding: 60px 0 20px;
+    text-align: center;
+}
+
+.footer-prestige .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-brand, .footer-links, .footer-contact, .footer-social {
+    flex: 1;
+    min-width: 220px;
+    text-align: left;
+}
+
+.footer-brand h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #a08050;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.footer-links h4, .footer-contact h4, .footer-social h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #f8f8f8;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #a08050;
+}
+
+.footer-contact p, .footer-social a {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 10px;
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #a08050;
+}
+
+.copyright-prestige {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 25px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #999;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-prestige h1 {
+        font-size: 50px;
+    }
+    .hero-prestige p {
+        font-size: 20px;
+    }
+    .about-section h2 {
+        font-size: 38px;
+    }
+    .product-item, .product-item:nth-child(even) {
+        flex-direction: column;
+    }
+    .product-item img, .product-item .item-details {
+        max-width: 100%;
+    }
+    .product-item .item-details {
+        padding: 30px;
+        text-align: center;
+    }
+    .product-item h3 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-prestige .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar-prestige .logo {
+        margin-bottom: 20px;
+    }
+    .navbar-prestige nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navbar-prestige nav ul li {
+        margin: 0 15px 15px 15px;
+    }
+    .hero-prestige h1 {
+        font-size: 40px;
+    }
+    .hero-prestige p {
+        font-size: 18px;
+    }
+    .cta-button-prestige {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+    .about-section h2 {
+        font-size: 32px;
+    }
+    .footer-prestige .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-brand, .footer-links, .footer-contact, .footer-social {
+        text-align: center;
+        margin-bottom: 30px;
+        min-width: unset;
+        width: 100%;
+    }
+    .footer-links ul {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-prestige h1 {
+        font-size: 32px;
+    }
+    .hero-prestige p {
+        font-size: 16px;
+    }
+    .about-section h2 {
+        font-size: 28px;
+    }
+    .product-item h3 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,328 @@
+/* Genel Ayarlar - Renkli Tema */
+:root {
+    --primary-colorful: #3498db; /* Mavi */
+    --secondary-colorful: #e67e22; /* Turuncu */
+    --accent-colorful: #2ecc71; /* Yeşil */
+    --background-colorful-light: #ecf0f1; /* Açık gri */
+    --text-colorful-dark: #2c3e50; /* Koyu mavi */
+    --text-colorful-light: #ffffff;
+    --font-family-colorful: 'Lato', sans-serif;
+}
+
+body.colorful-theme {
+    font-family: var(--font-family-colorful);
+    line-height: 1.7;
+    color: var(--text-colorful-dark);
+    background-color: var(--background-colorful-light);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll from geometric shapes */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+/* Navbar - Renkli Tema */
+.colorful-header {
+    background: var(--text-colorful-light);
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.colorful-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-colorful {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary-colorful);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.nav-links-colorful {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links-colorful li {
+    margin-left: 35px;
+}
+
+.nav-links-colorful a {
+    color: var(--text-colorful-dark);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links-colorful a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: var(--secondary-colorful);
+    transition: width 0.3s ease;
+}
+
+.nav-links-colorful a:hover {
+    color: var(--secondary-colorful);
+}
+
+.nav-links-colorful a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle-colorful {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-colorful-dark);
+    transition: color 0.3s ease;
+}
+
+.menu-toggle-colorful:hover {
+    color: var(--primary-colorful);
+}
+
+/* Hero Section - Renkli Tema */
+.hero-colorful-theme {
+    background: linear-gradient(135deg, var(--primary-colorful) 0%, var(--accent-colorful) 100%);
+    color: var(--text-colorful-light);
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-colorful-theme::before,
+.hero-colorful-theme::after {
+    content: '';
+    position: absolute;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    filter: blur(50px);
+}
+
+.hero-colorful-theme::before {
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    left: -50px;
+}
+
+.hero-colorful-theme::after {
+    width: 400px;
+    height: 400px;
+    bottom: -100px;
+    right: -100px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-colorful-theme h1 {
+    font-family: var(--font-family-colorful);
+    font-size: 3.8rem;
+    margin-bottom: 25px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.hero-colorful-theme p {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.btn-colorful {
+    background-color: var(--secondary-colorful);
+    color: var(--text-colorful-light);
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 8px 15px rgba(230, 126, 34, 0.4);
+}
+
+.btn-colorful:hover {
+    background-color: #d35400;
+    transform: translateY(-5px);
+}
+
+/* Content Section - Renkli Tema */
+.content-section-colorful {
+    padding: 80px 0;
+    background-color: var(--text-colorful-light);
+    position: relative;
+}
+
+.content-section-colorful::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, var(--background-colorful-light), var(--text-colorful-light));
+    z-index: 1;
+}
+
+.content-section-colorful h2 {
+    text-align: center;
+    font-family: var(--font-family-colorful);
+    font-size: 3rem;
+    margin-bottom: 60px;
+    color: var(--text-colorful-dark);
+    font-weight: 900;
+    position: relative;
+    z-index: 2;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.feature-card {
+    background: var(--background-colorful-light);
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.feature-card .icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-colorful);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+.feature-card .icon-wrapper svg {
+    width: 40px;
+    height: 40px;
+    color: var(--text-colorful-light);
+}
+
+.feature-card h3 {
+    font-family: var(--font-family-colorful);
+    font-size: 2rem;
+    color: var(--text-colorful-dark);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.feature-card p {
+    font-size: 1.05rem;
+    color: var(--text-colorful-dark);
+    opacity: 0.8;
+}
+
+/* Footer - Renkli Tema */
+.colorful-footer {
+    background: var(--text-colorful-dark);
+    color: var(--background-colorful-light);
+    text-align: center;
+    padding: 40px 0;
+    border-top: 5px solid var(--secondary-colorful);
+}
+
+.colorful-footer p {
+    font-size: 0.95rem;
+}
+
+/* Responsive Tasarım - Renkli Tema */
+@media (max-width: 768px) {
+    .nav-links-colorful {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px; /* Adjust based on header height */
+        left: 0;
+        background: var(--text-colorful-light);
+        border-top: 1px solid rgba(0,0,0,0.05);
+        padding: 10px 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+
+    .nav-links-colorful.active {
+        display: flex;
+    }
+
+    .nav-links-colorful li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links-colorful a {
+        padding: 10px 0;
+        display: block;
+        width: 100%;
+        color: var(--text-colorful-dark);
+    }
+
+    .menu-toggle-colorful {
+        display: block;
+    }
+
+    .hero-colorful-theme h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-colorful-theme p {
+        font-size: 1.2rem;
+    }
+
+    .content-section-colorful h2 {
+        font-size: 2.5rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}

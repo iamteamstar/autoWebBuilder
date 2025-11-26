@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kayıt Ol</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      color: #333;
+    }
+
+    .register-container {
+      background-color: #fff;
+      padding: 40px 50px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      text-align: center;
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      color: #333;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #43cea2;
+      box-shadow: 0 0 5px rgba(67, 206, 162, 0.4);
+    }
+
+    button {
+      width: 100%;
+      background-color: #43cea2;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #3db38f;
+      transform: scale(1.03);
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    a {
+      color: #185a9d;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <h2>Kayıt Ol</h2>
+    <input id="email" placeholder="E-posta">
+    <input id="password" type="password" placeholder="Şifre">
+    <button onclick="register()">Kayıt Ol</button>
+    <p>Zaten hesabın var mı? <a href="/login">Giriş yap</a></p>
+  </div>
+
+  <script>
+    async function register() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const res = await fetch('/register', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({email, password})
+      });
+      const data = await res.json();
+      if (res.ok) alert(data.message);
+      else alert(data.error);
+    }
+  </script>
+</body>
+</html>

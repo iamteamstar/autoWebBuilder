@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaydedilen Siteler</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+            padding: 0;
+            color: #1a1a1a;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-content h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: -0.5px;
+        }
+
+        .header-subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: white;
+            color: #2563eb;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1.5px solid #2563eb;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .sites-section {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e8eaed;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e8eaed;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0;
+        }
+
+        .sites-grid {
+            display: grid;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .site-card {
+            background: #fafbfc;
+            border: 1px solid #e8eaed;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .site-card:hover {
+            border-color: #2563eb;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+            background: white;
+        }
+
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 16px;
+        }
+
+        .site-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0;
+            word-break: break-word;
+            flex: 1;
+        }
+
+        .site-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+            white-space: nowrap;
+            margin-left: 12px;
+        }
+
+        .site-info {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 16px;
+        }
+
+        .site-actions {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #2563eb;
+            border: 1.5px solid #2563eb;
+        }
+
+        .btn-secondary:hover {
+            background: #f0f7ff;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .empty-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.4;
+        }
+
+        .empty-text {
+            font-size: 15px;
+            color: #999;
+        }
+
+        .empty-subtext {
+            font-size: 13px;
+            color: #bbb;
+            margin-top: 8px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 24px 16px;
+            }
+
+            .sites-section {
+                padding: 24px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .header-content {
+                width: 100%;
+            }
+
+            .back-link {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .site-header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .site-badge {
+                margin-left: 0;
+            }
+
+            .site-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 16px 12px;
+            }
+
+            .sites-section {
+                padding: 16px;
+                border-radius: 12px;
+            }
+
+            .header-content h2 {
+                font-size: 20px;
+            }
+
+            .section-title {
+                font-size: 16px;
+            }
+
+            .site-title {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <h2>Kaydedilen Siteler</h2>
+                <div class="header-subtitle">Düzenledikleriniz ve kaydettikleriniz</div>
+            </div>
+            <a href="/profile" class="back-link">← Profil'e Dön</a>
+        </div>
+
+        <div class="sites-section">
+            <div class="section-header">
+                <span style="font-size: 20px;">💾</span>
+                <h3 class="section-title">Sitelerim</h3>
+            </div>
+
+            {% if sites %}
+                <div class="sites-grid">
+                    {% for site in sites %}
+                    <div class="site-card">
+                        <div class="site-header">
+                            <h4 class="site-title">{{ site.id }}</h4>
+                            {% if site.edited %}
+                            <div class="site-badge">✓ Düzenlenmiş</div>
+                            {% endif %}
+                        </div>
+                        <div class="site-info">
+                            Kaydedildi: {{ site.saved_at }}
+                        </div>
+                        <div class="site-actions">
+                            <button class="btn-primary" onclick="window.location.href='/preview_saved/{{ site.id }}'">
+                                👁️ Önizle
+                            </button>
+                            <button class="btn-secondary" onclick="window.location.href='/download/{{ site.id }}'">
+                                💾 ZIP İndir
+                            </button>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="empty-state">
+                    <div class="empty-icon">📭</div>
+                    <div class="empty-text">Henüz düzenlenmiş site bulunmuyor</div>
+                    <div class="empty-subtext">Sitelerinizi düzenlemeye başlayın ve bunları kaydedebilirsiniz</div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

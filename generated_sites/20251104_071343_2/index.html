@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Bakış - Akıllı Telefonlar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar-minimal-container">
+        <nav class="navbar-minimal">
+            <div class="logo-minimal">
+                <a href="#">Insight<span>Mobile</span></a>
+            </div>
+            <ul class="nav-links-minimal">
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Kategoriler</a></li>
+                <li><a href="#">Rehberler</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+            <div class="menu-toggle-minimal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-minimal-section">
+            <div class="hero-content-minimal">
+                <h1>Akıllı Telefon Dünyasına Sade Bir Bakış</h1>
+                <p>En güncel modeller ve en doğru bilgilerle doğru kararı verin.</p>
+            </div>
+        </section>
+
+        <section class="content-minimal-area container">
+            <h2>Akıllı Telefon Kategorileri</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <h3>Amiral Gemisi</h3>
+                    <p>En yüksek performans ve en yeni özellikler.</p>
+                </div>
+                <div class="category-card">
+                    <h3>Orta Segment</h3>
+                    <p>Fiyat-performans dengesinde ideal seçenekler.</p>
+                </div>
+                <div class="category-card">
+                    <h3>Bütçe Dostu</h3>
+                    <p>Uygun fiyatlı ve temel ihtiyaçları karşılayan telefonlar.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-preview container">
+            <h2>Son Yazılarımız</h2>
+            <article class="blog-post-minimal">
+                <h3>2023'ün En İyi Kamera Telefonları</h3>
+                <p>Mobil fotoğrafçılığın zirvesini sunan cihazları inceledik ve sizin için en iyilerini seçtik. Detaylı testler ve örnek fotoğraflarla...</p>
+                <a href="#" class="read-more-btn">Devamını Oku</a>
+            </article>
+            <article class="blog-post-minimal">
+                <h3>Pil Ömrü Uzun Akıllı Telefonlar Rehberi</h3>
+                <p>Gün boyu şarj derdi olmadan kullanabileceğiniz akıllı telefonları derledik. Uzun pil ömrü sunan modeller ve ipuçları.</p>
+                <a href="#" class="read-more-btn">Devamını Oku</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer-minimal-section">
+        <div class="footer-minimal-content container">
+            <div class="footer-info">
+                <h4>Insight Mobile</h4>
+                <p>Bilgiye odaklı, sade ve anlaşılır.</p>
+            </div>
+            <div class="footer-nav-minimal">
+                <ul>
+                    <li><a href="#">Hakkımızda</a></li>
+                    <li><a href="#">Gizlilik</a></li>
+                    <li><a href="#">Destek</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright-minimal">
+            <p>&copy; 2023 InsightMobile. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle-minimal').addEventListener('click', () => {
+            document.querySelector('.nav-links-minimal').classList.toggle('active');
+            document.querySelector('.menu-toggle-minimal').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

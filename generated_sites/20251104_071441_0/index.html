@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akıllı Telefonlar - TechGrid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>/* CSS here */</style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">TechGrid</div>
+            <nav class="nav-links">
+                <a href="#home">Anasayfa</a>
+                <a href="#modeller">Modeller</a>
+                <a href="#incelemeler">İncelemeler</a>
+                <a href="#blog">Blog</a>
+                <a href="#iletisim">İletişim</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Menü"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Geleceğin Akıllı Telefonları Burada</h1>
+                <p>En son teknolojiye sahip cihazları keşfedin ve mobil deneyiminizi dönüştürün.</p>
+                <a href="#modeller" class="btn primary">Modelleri Keşfet</a>
+            </div>
+        </section>
+
+        <section class="content-area featured-products">
+            <div class="container">
+                <h2>Öne Çıkan Ürünler</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200/333/fff?text=Phone+A" alt="Akıllı Telefon A">
+                        <h3>Model X Pro</h3>
+                        <p>Yenilikçi kamera, üstün performans.</p>
+                        <a href="#" class="btn secondary">İncele</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200/333/fff?text=Phone+B" alt="Akıllı Telefon B">
+                        <h3>Galaxy S Ultra</h3>
+                        <p>Geniş ekran, uzun pil ömrü.</p>
+                        <a href="#" class="btn secondary">İncele</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200/333/fff?text=Phone+C" alt="Akıllı Telefon C">
+                        <h3>Pixel Z Fold</h3>
+                        <p>Katlanabilir tasarım, güçlü işlemci.</p>
+                        <a href="#" class="btn secondary">İncele</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200/333/fff?text=Phone+D" alt="Akıllı Telefon D">
+                        <h3>OnePlus Nova</h3>
+                        <p>Hızlı şarj, akıcı arayüz.</p>
+                        <a href="#" class="btn secondary">İncele</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-area about-us">
+            <div class="container">
+                <h2>Neden Bizi Seçmelisiniz?</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-microchip"></i>
+                        <h3>Son Teknoloji</h3>
+                        <p>En yeni işlemciler ve yazılımlar.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-camera"></i>
+                        <h3>Mükemmel Kameralar</h3>
+                        <p>Profesyonel seviye fotoğrafçılık deneyimi.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-battery-full"></i>
+                        <h3>Uzun Pil Ömrü</h3>
+                        <p>Tüm gün kesintisiz kullanım.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 TechGrid. Tüm hakları saklıdır.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

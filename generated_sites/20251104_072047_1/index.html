@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akıllı Telefon Rehberi - Koyu Tema Dinamik</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Genel Ayarlar - Koyu Tema */
+        :root {
+            --dark-bg: #1a1a2e;
+            --dark-card-bg: #272740;
+            --accent-color: #e07a5f; /* Turuncu-kırmızımsı vurgu */
+            --text-color-light: #e0e0e0;
+            --text-color-muted: #a0a0a0;
+            --dark-border: #33334f;
+            --font-family-heading: 'Montserrat', sans-serif;
+            --font-family-body: 'Roboto', sans-serif;
+        }
+
+        body.dark-theme {
+            font-family: var(--font-family-body);
+            line-height: 1.6;
+            color: var(--text-color-light);
+            background-color: var(--dark-bg);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navbar - Koyu Tema */
+        .dark-header {
+            background: var(--dark-bg);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--dark-border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .dark-header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-dark {
+            font-family: var(--font-family-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links-dark {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links-dark li {
+            margin-left: 30px;
+        }
+
+        .nav-links-dark a {
+            color: var(--text-color-light);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links-dark a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links-dark a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-links-dark a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle-dark {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-color-light);
+            transition: color 0.3s ease;
+        }
+
+        .menu-toggle-dark:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section - Koyu Tema */
+        .hero-dark-theme {
+            background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)), url('https://source.unsplash.com/1600x900/?futuristic-smartphone,technology') no-repeat center center/cover;
+            color: var(--text-color-light);
+            text-align: center;
+            padding: 120px 20px;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-dark-theme h1 {
+            font-family: var(--font-family-heading);
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-dark-theme p {
+            font-size: 1.35rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+
+        .btn-secondary {
+            background-color: var(--accent-color);
+            color: var(--text-color-light);
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(224, 122, 95, 0.4);
+        }
+
+        .btn-secondary:hover {
+            background-color: #c9664b;
+            transform: translateY(-3px);
+        }
+
+        /* Content Section - Koyu Tema */
+        .content-section-dark {
+            padding: 80px 0;
+            background-color: var(--dark-bg);
+        }
+
+        .content-section-dark h2 {
+            text-align: center;
+            font-family: var(--font-family-heading);
+            font-size: 3rem;
+            margin-bottom: 60px;
+            color: var(--accent-color);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .grid-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .category-card {
+            background: var(--dark-card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .category-card h3 {
+            font-family: var(--font-family-heading);
+            font-size: 1.8rem;
+            color: var(--text-color-light);
+            margin: 20px 0 10px;
+            padding: 0 20px;
+        }
+
+        .category-card p {
+            font-size: 1rem;
+            color: var(--text-color-muted);
+            padding: 0 20px 25px;
+        }
+
+        /* Footer - Koyu Tema */
+        .dark-footer {
+            background: #111122;
+            color: var(--text-color-muted);
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid var(--dark-border);
+        }
+
+        .dark-footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Tasarım - Koyu Tema */
+        @media (max-width: 768px) {
+            .nav-links-dark {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 80px; /* Adjust based on header height */
+                left: 0;
+                background: var(--dark-bg);
+                border-top: 1px solid var(--dark-border);
+                padding: 10px 0;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+                z-index: 999;
+            }
+
+            .nav-links-dark.active {
+                display: flex;
+            }
+
+            .nav-links-dark li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .nav-links-dark a {
+                padding: 10px 0;
+                display: block;
+                width: 100%;
+            }
+
+            .menu-toggle-dark {
+                display: block;
+            }
+
+            .hero-dark-theme h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-dark-theme p {
+                font-size: 1.1rem;
+            }
+
+            .content-section-dark h2 {
+                font-size: 2.2rem;
+            }
+
+            .grid-categories {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <header class="dark-header">
+        <nav class="container">
+            <a href="#" class="logo-dark">Akıllı Telefon Rehberi</a>
+            <ul class="nav-links-dark">
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Yenilikler</a></li>
+                <li><a href="#">Popüler</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+            <button class="menu-toggle-dark" aria-label="Toggle navigation">&#9776;</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero-dark" class="hero-dark-theme">
+            <div class="container">
+                <h1>Teknolojinin Kalbi: Akıllı Telefonlar</h1>
+                <p>En yeni mobil devrimleri keşfedin, detaylı özelliklere ve kullanıcı yorumlarına göz atın.</p>
+                <a href="#" class="btn-secondary">Hemen Keşfet</a>
+            </div>
+        </section>
+
+        <section id="categories-dark" class="content-section-dark">
+            <div class="container">
+                <h2>Kategoriler</h2>
+                <div class="grid-categories">
+                    <div class="category-card">
+                        <img src="https://source.unsplash.com/400x300/?new-smartphone" alt="Yeni Modeller">
+                        <h3>Yeni Çıkanlar</h3>
+                        <p>Piyasaya sürülen en son akıllı telefonlar.</p>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://source.unsplash.com/400x300/?gaming-phone" alt="Oyun Telefonları">
+                        <h3>Oyun Telefonları</h3>
+                        <p>En iyi oyun deneyimi sunan cihazlar.</p>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://source.unsplash.com/400x300/?camera-phone" alt="Kamera Telefonları">
+                        <h3>Kamera Telefonları</h3>
+                        <p>Profesyonel düzeyde fotoğraf çeken telefonlar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="dark-footer">
+        <div class="container">
+            <p>&copy; 2023 Akıllı Telefon Rehberi. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.menu-toggle-dark').addEventListener('click', () => {
+            document.querySelector('.nav-links-dark').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

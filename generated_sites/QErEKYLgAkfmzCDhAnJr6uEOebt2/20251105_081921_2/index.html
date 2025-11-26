@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sdsd Sitesi - Modern Profesyonel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar professional-navbar">
+        <div class="container">
+            <div class="logo">Sdsd</div>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="#hero">Ana Sayfa</a></li>
+                    <li><a href="#solution">Çözümlerimiz</a></li>
+                    <li><a href="#about-us">Hakkımızda</a></li>
+                    <li><a href="#contact-us">İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" aria-label="Menü">☰</div>
+        </div>
+    </header>
+
+    <section id="hero" class="hero professional-hero">
+        <div class="container">
+            <h1>İşinizi Dijitalleştirin, Fark Yaratın</h1>
+            <p>Sdsd, modern iş dünyasının ihtiyaçlarına yönelik yenilikçi ve ölçeklenebilir çözümler sunar.</p>
+            <a href="#solution" class="button professional-button">Çözümlerimizi Keşfedin</a>
+        </div>
+    </section>
+
+    <section id="solution" class="content-section professional-section">
+        <div class="container">
+            <h2>Akıllı Çözümlerimiz</h2>
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <i class="icon fas fa-cogs"></i>
+                    <h3>Kurumsal Uygulamalar</h3>
+                    <p>İş süreçlerinizi optimize eden özel yazılım çözümleri.</p>
+                </div>
+                <div class="solution-card">
+                    <i class="icon fas fa-chart-line"></i>
+                    <h3>Veri Analizi ve Raporlama</h3>
+                    <p>Verilerinizi anlamlı bilgilere dönüştürün, stratejik kararlar alın.</p>
+                </div>
+                <div class="solution-card">
+                    <i class="icon fas fa-cloud"></i>
+                    <h3>Bulut Hizmetleri</h3>
+                    <p>Güvenli ve esnek bulut tabanlı altyapı ve uygulama yönetimi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-us" class="content-section professional-section light-section-bg">
+        <div class="container">
+            <h2>Sdsd Hakkında</h2>
+            <p>Sdsd, kurulduğu günden bu yana dijital dünyada işletmelerin büyümesini destekleyen bir teknoloji danışmanlık firmasıdır. Müşterilerimizin hedeflerine ulaşmaları için teknolojik stratejiler geliştirir ve uygularız.</p>
+            <p>Şeffaflık, güvenilirlik ve sürekli inovasyon ilkeleriyle hareket ederek, her projede beklentilerin üzerinde sonuçlar sunmayı taahhüt ediyoruz. Deneyimli ekibimizle birlikte, geleceğin teknolojilerini bugünden şekillendiriyoruz.</p>
+        </div>
+    </section>
+
+    <section id="contact-us" class="content-section professional-section">
+        <div class="container">
+            <h2>İletişime Geçin</h2>
+            <p>İşinizin potansiyelini keşfetmek ve dijital dönüşüm yolculuğunuza başlamak için bizimle iletişime geçin.</p>
+            <form class="contact-form professional-form">
+                <div class="form-group">
+                    <label for="name">Adınız Soyadınız</label>
+                    <input type="text" id="name" name="name" placeholder="Adınız Soyadınız" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta Adresiniz</label>
+                    <input type="email" id="email" name="email" placeholder="E-posta Adresiniz" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesajınız</label>
+                    <textarea id="message" name="message" placeholder="Mesajınızı buraya yazın..." required></textarea>
+                </div>
+                <button type="submit" class="button professional-button">Mesaj Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer professional-footer">
+        <div class="container">
+            <p>&copy; 2023 Sdsd. Tüm Hakları Saklıdır.</p>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

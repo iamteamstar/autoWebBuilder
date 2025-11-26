@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akıllı Telefonlar - PhoneSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>/* CSS here */</style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">PhoneSphere</a>
+            <nav class="nav-links">
+                <a href="#anasayfa">Anasayfa</a>
+                <a href="#kategoriler">Kategoriler</a>
+                <a href="#blog">Blog</a>
+                <a href="#hakkimizda">Hakkımızda</a>
+                <a href="#iletisim">İletişim</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Menü"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Mobil Dünyaya Hoş Geldiniz!</h1>
+                    <p>En yeni akıllı telefonları, güncel incelemeleri ve mobil yaşam ipuçlarını keşfedin.</p>
+                    <a href="#kategoriler" class="btn call-to-action">Hemen Keşfet</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/400x400/8e44ad/fff?text=PhoneSphere+Visual" alt="Akıllı Telefon Görseli">
+                </div>
+            </div>
+        </section>
+
+        <section class="content-area categories">
+            <div class="container">
+                <h2>Popüler Kategoriler</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <i class="fas fa-camera"></i>
+                        <h3>En İyi Kameralı Telefonlar</h3>
+                        <p>Harika fotoğraflar çekmek için.</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Oyun Telefonları</h3>
+                        <p>Maksimum performansla oyun keyfi.</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-battery-half"></i>
+                        <h3>Uzun Pil Ömrü</h3>
+                        <p>Şarj endişesi olmadan tüm gün.</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Ekonomik Seçenekler</h3>
+                        <p>Bütçe dostu, yüksek performans.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-area testimonials">
+            <div class="container">
+                <h2>Kullanıcı Yorumları</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p>"PhoneSphere sayesinde aradığım telefonu kolayca buldum. Detaylı incelemeler çok yardımcı oldu!"</p>
+                        <h4>- Ayşe Yılmaz</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Sitenin tasarımı çok hoş, aradığım bilgilere hızlıca ulaştım. Teşekkürler PhoneSphere!"</p>
+                        <h4>- Can Demir</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col">
+                <h3>Hızlı Erişim</h3>
+                <ul>
+                    <li><a href="#anasayfa">Anasayfa</a></li>
+                    <li><a href="#kategoriler">Kategoriler</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Bizi Takip Edin</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>İletişim</h3>
+                <p>info@phonesphere.com</p>
+                <p>+90 123 456 7890</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 PhoneSphere. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
