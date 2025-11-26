@@ -91,7 +91,6 @@ Flask Backend
 
 Yapay zekâdan istenen çıktı:
 
-```json
 [
   {
     "id": 1,
@@ -105,3 +104,58 @@ Yapay zekâdan istenen çıktı:
 
 ## 🏗 Sistem Mimarisi
 
+Sistem:
+
+HTML & CSS dosyalarını kaydeder
+
+Görselleri otomatik ekler
+
+Metadata oluşturur
+
+##Site Düzenleme Modülü
+Kullanıcı düzenleme ekranında:
+
+Biçimlendirme Araçları
+
+Bold
+
+Italic
+
+Underline
+
+Font Değiştirme
+
+Renk Picker
+
+Arka Plan Değiştirme
+
+HTML Yapısal Araçlar
+
+Yeni bölüm ekleme
+
+Mevcut bölümü silme
+
+Kod düzenleme modu
+
+Logo Yükleme
+
+Herhangi bir PNG/JPG yüklenip sayfaya uygulanabilir.
+
+##Kaydetme Süreci
+original site  →  edited copy oluşturulur
+                  generated_sites/<user>/edited/<site>_edited
+##Klasör Yapısı
+generated_sites/
+   └── <user_id>/
+        ├── <site_id>/
+        │     ├── index.html
+        │     ├── style.css
+        │     ├── images/
+        │     └── metadata.json
+        │
+        └── edited/
+              └── <site_id>_edited/
+                     ├── index.html
+                     ├── style.css
+                     ├── images/
+                     └── metadata.json
