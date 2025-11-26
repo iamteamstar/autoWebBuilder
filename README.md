@@ -1,0 +1,107 @@
+# 🌐 AI Destekli Otomatik Web Sitesi Oluşturma Sistemi
+### **autoWebBuilder – Yapay Zekâ ile Anında Profesyonel Web Siteleri Oluşturun**
+
+---
+
+## 📑 İçindekiler
+- [📘 Proje Özeti](#-proje-özeti)
+- [🚀 Temel Özellikler](#-temel-özellikler)
+- [🏗 Sistem Mimarisi](#-sistem-mimarisi)
+- [🔑 Kullanıcı Akışı](#-kullanıcı-akışı)
+- [🧠 Yapay Zekâ ile Şablon Üretimi](#-yapay-zekâ-ile-şablon-üretimi)
+- [🎨 Site Düzenleme Modülü](#-site-düzenleme-modülü)
+- [📁 Klasör Yapısı](#-klasör-yapısı)
+- [⚙️ Teknik Bileşenler](#️-teknik-bileşenler)
+- [🖼 Akış Diyagramları](#-akış-diyagramları)
+- [💾 Kurulum ve Çalıştırma](#-kurulum-ve-çalıştırma)
+- [📝 Lisans](#-lisans)
+
+---
+
+## 📘 Proje Özeti
+
+**autoWebBuilder**, kullanıcının yalnızca tema konusunu yazarak **3 farklı yapay zekâ tabanlı modern web sitesi tasarımı** üreten bir tam otomatik web sitesi oluşturma platformudur.
+
+Sistem;  
+✔ Gemini API ile HTML+CSS üretir  
+✔ Kullanıcıya özel klasörlerde siteleri saklar  
+✔ Önizleme ve düzenleme sağlar  
+✔ Düzenlenen siteleri zip olarak indirilebilir yapar  
+✔ Kullanıcı bazında profil & kayıt sistemi içerir  
+
+Hiçbir kod bilgisine gerek olmadan profesyonel web sitesi üretmeyi sağlar.
+
+---
+
+## 🚀 Temel Özellikler
+
+### **✨ Yapay Zekâ ile 3 Farklı Tema Üretimi**
+- Her tema tamamen farklı HTML + CSS yapısına sahiptir.
+- Navbar, Hero Section, Content Sections, Footer içerir.
+
+### **🎨 Gelişmiş Site Düzenleme Paneli**
+Kullanıcı siteyi şu açılardan düzenleyebilir:
+- Logo değiştirme  
+- Tema renkleri  
+- Arka plan renkleri  
+- Yazı tipi & font ailesi  
+- Kalın, italik, altı çizili metin  
+- Yeni bölüm / section ekleme  
+- Doğrudan HTML kodu üzerinde düzenleme  
+
+### **📁 Kullanıcıya Özel Dosya Yönetimi**
+- Her kullanıcı kendi UID klasörüne sahiptir.
+- Orijinal ve edited siteler ayrı saklanır.
+
+### **📥 Zip Olarak İndirme**
+- Kullanıcı düzenlediği veya orijinal siteyi .zip olarak indirebilir.
+
+### **👤 Profil & Kaydedilen Siteler**
+- Kullanıcıya ait tüm siteler listelenir.
+- Düzenlenmiş sürümler ayrı olarak gösterilir.
+
+---
+Flask Backend
+│
+├── Yapay Zekâ Modülü (Gemini API)
+├── Firebase Authentication (Email/Password Login)
+└── Dinamik Site Üretim Motoru
+├── HTML/CSS Render
+├── Görsel Üretici
+├── Metadata Sistemi
+└── Zip Exporter
+
+## 🔑 Kullanıcı Akışı
+[1] Kayıt / Giriş
+↓
+[2] Ana Sayfa → Konu Girilir
+↓
+[3] Gemini API → 3 Site Üretilir
+↓
+[4] Kullanıcı Önizleme / Düzenleme / İndirme
+↓
+[5] Değişiklikler edited klasörüne kaydedilir
+↓
+[6] Profil & Kaydedilen Sitelerden yönetim yapılır
+
+
+---
+
+## 🧠 Yapay Zekâ ile Şablon Üretimi
+
+Yapay zekâdan istenen çıktı:
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Modern Tema",
+    "description": "Minimalist ve kurumsal görünüm",
+    "html": "<!DOCTYPE html>...",
+    "css": "body { font-family: Arial; }"
+  },
+  ...
+]
+
+## 🏗 Sistem Mimarisi
+
