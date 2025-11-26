@@ -73,6 +73,7 @@ Flask Backend
 
 ##  Kullanıcı Akışı
 [1] Kayıt / Giriş
+
 <img width="493" height="412" alt="image" src="https://github.com/user-attachments/assets/7aa13281-5684-42ba-8d60-a8e0ef205839" /> 
 <img width="484" height="402" alt="image" src="https://github.com/user-attachments/assets/b45a5f4f-0fc4-46c5-89af-6c55649b3ee6" />
 
