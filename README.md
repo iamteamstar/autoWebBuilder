@@ -159,3 +159,49 @@ generated_sites/
                      ├── style.css
                      ├── images/
                      └── metadata.json
+                     
+##Teknik Bileşenler
+
+| Bileşen        | Teknoloji                          |
+| -------------- | ---------------------------------- |
+| Backend        | Flask (Python)                     |
+| Yapay Zekâ     | Google Gemini API (2.5 Flash)      |
+| Authentication | Firebase Authentication            |
+| Veri           | JSON + Dosya Sistemi               |
+| Frontend       | HTML + CSS + JavaScript            |
+| Görseller      | Unsplash source (konuya özel)      |
+| Güvenlik       | .env + gitignore secret management |
+| Oturum         | Flask Session                      |
+
+##Genel Sistem Diyagramı
+
+Kullanıcı
+   ↓
+Flask Backend
+   ↓
+Gemini API → HTML/CSS üretimi
+   ↓
+Site Dosyaları → generated_sites/
+   ↓
+Önizleme / Düzenleme / İndirme
+
+##Düzenleme Kaydetme Süreci
+
+[1] Kullanıcı siteyi düzenler
+      ↓
+[2] HTML içerik JSON olarak backend’e gönderilir
+      ↓
+[3] Orijinal site kopyalanır
+      ↓
+[4] edited/<site_id>_edited/ klasörüne yazılır
+      ↓
+[5] metadata.json güncellenir
+
+##Zip İndirme Süreci
+[İstek] GET /download/<site_id>
+      ↓
+Klasör diskten okunur
+      ↓
+Zip arşivi oluşturulur
+      ↓
+Kullanıcıya response olarak gönderilir
