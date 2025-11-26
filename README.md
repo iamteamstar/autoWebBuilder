@@ -205,3 +205,26 @@ Klasör diskten okunur
 Zip arşivi oluşturulur
       ↓
 Kullanıcıya response olarak gönderilir
+
+##Kurulum ve Çalıştırma
+1.Depoyu Klonla
+git clone https://github.com/kullanici/autoWebBuilder.git
+cd autoWebBuilder
+
+2.Sanal Ortam Oluştur
+python -m venv .venv
+.venv\Scripts\activate
+
+3.Bağımlılıkları Kur
+pip install -r requirements.txt
+
+4..env Dosyasını Oluştur
+GEMINI_API_KEY=your_api_key_here
+
+5.Firebase Admin Key ekle
+Dosya adı firebase_admin_key.json olmalı
+ve proje dizininde bulunmalıdır.
+
+6.Uygulamayı Başlat
+python app.py
+
